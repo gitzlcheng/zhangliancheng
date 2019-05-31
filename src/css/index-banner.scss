@@ -1,0 +1,112 @@
+@charset 'utf-8';
+html,
+body,
+div,
+span,
+ul,
+img,
+li {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+$with:1349px;
+#index-banner {
+    width: auto;
+    height: 670px;
+    position: relative;
+    overflow: hidden;
+    .index-banner-img {
+        position: absolute;
+        width: 9943px;
+        height: 670px;
+    }
+    .index-banner-img div:nth-child(1) {
+        background-image: url(../img/1.jpg);
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .index-banner-img div:nth-child(2) {
+        background-image: url(../img/2.jpg);
+        position: absolute;
+        left: $with;
+        top: 0;
+    }
+    .index-banner-img div:nth-child(3) {
+        background-image: url(../img/3.jpg);
+        position: absolute;
+        left: $with*2;
+        top: 0;
+    }
+    .index-banner-img div:nth-child(4) {
+        background-image: url(../img/4.jpg);
+        position: absolute;
+        left: $with*3;
+        top: 0;
+    }
+    .index-banner-img div:nth-child(5) {
+        background-image: url(../img/5.jpg);
+        position: absolute;
+        left: $with*4;
+        top: 0;
+    }
+    .index-banner-img div:nth-child(6) {
+        background-image: url(../img/6.jpg);
+        position: absolute;
+        left: $with*5;
+        top: 0;
+    }
+    .index-banner-img div:nth-child(7) {
+        background-image: url(../img/7.jpg);
+        position: absolute;
+        left: $with*6;
+        top: 0;
+    }
+    .index-banner-img div:nth-child(8) {
+        background-image: url(../img/1.jpg);
+        position: absolute;
+        left: $with*7;
+        top: 0;
+    }
+    .index-banner-img div {
+        width: 1349px;
+        height: 670px;
+        background-position: center 0;
+        background-repeat: no-repeat;
+        background-size: 2522px 670px;
+        float: left;
+    }
+    .list-point {
+        position: absolute;
+        width: 500px;
+        padding: 0 10px;
+        height: 25px;
+        z-index: 20;
+        left: 50%;
+        margin-left: -250px;
+        bottom: 20px;
+        text-align: center;
+        &>li {
+            display: inline-block;
+            zoom: 1;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            margin: 5px 8px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .li-active {
+            width: 10px;
+            height: 10px;
+            margin-top: 5px;
+            border: 1px solid #fff;
+            background-color: transparent;
+        }
+    }
+}

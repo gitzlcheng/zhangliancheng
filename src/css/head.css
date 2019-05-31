@@ -1,0 +1,491 @@
+/* 重置样式 */
+
+html,
+body,
+div,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+fieldset,
+input,
+abbr,
+article,
+aside,
+command,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+mark,
+meter,
+nav,
+output,
+progress,
+section,
+summary,
+time {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+address,
+caption,
+cite,
+code,
+em,
+strong,
+th,
+figcaption {
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body,
+html {
+    min-width: 1240px;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font: 14px/1.5 Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Microsoft YaHei", SimSun, Heiti, sans-serif;
+    color: #515151;
+}
+
+li {
+    list-style-type: none;
+}
+
+i {
+    font-style: normal;
+}
+
+a {
+    text-decoration: none!important;
+    color: #515151;
+}
+
+.clear {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+/* 头部导航*/
+
+#head {
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    /* color: #fff !important; */
+    z-index: 9999;
+}
+
+.head-center {
+    width: 1240px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/* logo */
+
+.meizu-header-logo {
+    float: left;
+    padding: 28px 0;
+}
+
+#head .meizu-header-logo-img {
+    display: block;
+    width: 125px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.meizu-header-logo a {
+    color: #515151;
+    text-decoration: none;
+}
+
+.meizu-header-logo a>svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* logo结束 */
+
+
+/* 购物车 */
+
+.meizu-header-cart {
+    position: relative;
+    float: right;
+    margin: 27px 0 0 8px;
+    width: 29px;
+    height: 29px;
+    background-image: url(../img/shopping-cart-gray_f0fb320.png);
+    background-image: -webkit-image-set(url(../img/shopping-cart-gray@2x_6085b4f.png) 2x);
+    background-repeat: no-repeat;
+    text-align: center;
+    font-size: 12px;
+    text-indent: 3px;
+    line-height: 10px;
+    background-position-y: center;
+}
+
+.meizu-header-cart em {
+    position: absolute;
+    top: -2px;
+    right: -3px;
+    height: 15px;
+    border-radius: 50%;
+    background: #c00;
+    color: #fff;
+    line-height: 15px;
+    text-align: center;
+    display: inline-block;
+    padding: 0 4px;
+    text-indent: 0;
+}
+
+
+/* 购物车结束 */
+
+
+/* 用户登录图标 */
+
+.meizu-header-user {
+    float: right;
+    padding: 32px 0 0 8px;
+    text-align: right;
+    font-size: 12px;
+    position: relative;
+    z-index: 105;
+}
+
+.meizu-header-user-img {
+    background-image: url(../img/icon-user_d8bdb23.png);
+    /* background-image: -webkit-image-set(url(../img/icon-user-white_10eaf41.png) 1x, url(../img/icon-user-white@2x_e5c6494.png) 2x); */
+    background-repeat: no-repeat;
+}
+
+
+/* 
+.meizu-header-user-img {
+    background-image: url(../img/icon-user_d8bdb23.png);
+    background-image: -webkit-image-set(url(../img/icon-user_d8bdb23.png) 1x, url(../img/icon-user@2x_2c33f26.png) 2x);
+    background-repeat: no-repeat;
+} */
+
+.meizu-header-user-img {
+    position: relative;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.meizu-header-user:hover .meizu-header-user-dropdown {
+    display: block;
+}
+
+.meizu-header-user-img img {
+    display: block;
+    width: 29px;
+    height: 29px;
+    margin-top: -5px;
+}
+
+.meizu-header-user-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    width: 98px;
+    background-color: #fff;
+    top: 64px;
+    left: 50%;
+    border-radius: 2px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0;
+    margin-left: -48px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+}
+
+.xiaosj {
+    color: #fff;
+    position: absolute;
+    top: -8px;
+    left: 0;
+    right: 0;
+}
+
+.meizu-header-user li {
+    font-size: 12px;
+    display: block;
+    margin: 15px auto;
+}
+
+.meizu-header-user li a {
+    text-decoration: none!important;
+}
+
+.meizu-header-user li:hover a {
+    color: #00C3F5;
+}
+
+
+/* 用户登录图像结束 */
+
+
+/* 搜索框 */
+
+.meizu-header-search {
+    position: relative;
+    float: right;
+    margin: 26px 5px 0 10px;
+    width: 170px;
+    height: 30px;
+    line-height: 29px;
+    font-size: 12px;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    /* border-color: transparent; */
+}
+
+.meizu-header-search input {
+    display: block;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    width: 127px;
+    height: 20px;
+    margin-left: 15px;
+    margin-top: 5px;
+    transition: width 0.5s;
+    font-size: 12px;
+    line-height: 20px;
+    color: #333;
+    background: transparent;
+    box-sizing: content-box;
+    outline-offset: 0;
+}
+
+.meizu-header-search a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 36px;
+    height: 32px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.meizu-header-search a svg {
+    display: block;
+    margin: 7px 5px 0 auto;
+}
+
+
+/* head的搜索框结束 */
+
+
+/* 头部导航栏 */
+
+.meizu-header-link {
+    float: right;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.meizu-header-link li {
+    float: left;
+}
+
+.meizu-header-link a {
+    text-decoration: none;
+    display: block;
+    padding: 31px 20px 30px;
+    line-height: 21px;
+    font-size: 14px;
+    transition: color 0.1s linear;
+}
+
+.meizu-header-link a:hover {
+    color: #00b9f2;
+}
+
+
+/* 头部导航栏二级导航 */
+
+.meizu-header-sub {
+    z-index: 1000;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 82px;
+    background-color: #fff;
+    min-width: 100%;
+    overflow: hidden;
+    height: 191px;
+    display: none;
+}
+
+.meizu-header-sub-wrap {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.meizu-header-sub ul {
+    overflow: hidden;
+    padding: 5px 0 20px;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 12px;
+}
+
+.meizu-header-sub li {
+    display: inline-block;
+    /* text-align: center; */
+    margin: 0;
+    /* filter: alpha(opacity=0);
+    opacity: 0; */
+    padding: 5px 5px 20px;
+    width: 142px;
+    height: 140px;
+    font-size: 12px;
+    color: #333;
+}
+
+.meizu-header-sub a {
+    font-size: 12px;
+    width: 142px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    padding: 0s;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+}
+
+.meizu-header-sub a i {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 120px;
+}
+
+.meizu-header-sub a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    background-color: #fff;
+}
+
+.meizu-header-sub a:hover span {
+    transition: opacity 0.6 linear;
+    opacity: 0.01;
+}
+
+.meizu-header-sub a em {
+    display: block;
+    color: #333;
+    font-style: normal;
+}
+
+
+/* app的二级导航 */
+
+#meizu-header-sub-download {
+    width: 100%;
+    height: 320px;
+    background: #fff;
+}
+
+.app-down-content {
+    position: relative;
+    width: 1240px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+#meizu-header-sub-download img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#meizu-header-sub-download .app-down-link {
+    position: absolute;
+    width: 125px;
+    height: 28px;
+    padding: 0;
+}
+
+#meizu-header-sub-download .app-down-link-2 {
+    left: 375px;
+    top: 217px;
+}
+
+#meizu-header-sub-download .app-down-link-3 {
+    right: 115px;
+    top: 217px;
+}
+
+
+/* app的二级导航结束 */
+
+
+/* 头部导航栏二级导航结束 */
+
+
+/* 轮播图 */
+
+.carousel-inner .item img {
+    width: 100%;
+    height: 670px;
+}
