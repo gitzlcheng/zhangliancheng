@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  position: relative;
+  font-family: "PingFang SC", "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", Arial, Helvetica, sans-serif, "\5B8B\4F53";
+  font-size: 14px;
+  min-width: 1240px;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 246px;
+}
+
+body {
+  padding-top: 82px;
+}
+
+.head-center:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.main {
+  position: relative;
+  padding-top: 66px;
+  line-height: 1.5;
+  color: #000;
+}
+
+.nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: #f6f8fb;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.nav .-container {
+  position: relative;
+  width: 1240px;
+  height: 70px;
+  margin: 0 auto;
+}
+
+.nav .-name {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  font-size: 26px;
+}
+
+.-ulist {
+  float: right;
+  margin-top: 26px;
+  margin-right: -15px;
+}
+
+.-ulist .-item {
+  float: left;
+  position: relative;
+  z-index: 1;
+  border-right: 1px solid #dedede;
+}
+
+.-ulist .-item .-link {
+  display: block;
+  padding: 0 20px;
+  line-height: 20px;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  transition: color .3s;
+}
