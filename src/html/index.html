@@ -10,11 +10,21 @@
     <link rel="stylesheet" href="../css/head.css">
     <link rel="stylesheet" href="../css/index-banner.min.css">
     <link rel="stylesheet" href="../css/footer.min.css">
+    <link rel="stylesheet" href="../css/main.min.css">
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/jquery.lazyload.min.js"></script>
     <!--[if lt IE 9]>
       <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
+    <script>
+        $(function() {
+            $("img.lazy").lazyload({
+                placeholder: "../img/loading.gif",
+                effect: "fadeIn"
+            });
+        })
+    </script>
 </head>
 
 <body>
@@ -555,6 +565,198 @@
         </ul>
     </div>
     <!-- 轮播图结束 -->
+
+    <!-- main -->
+    <div class="main">
+        <div class="index-adv-center" id="index-adv-center">
+            <div class="section-box">
+                <div class="section-box-adv">
+                    <ul class="clearfix index-center-wrapper">
+                        <li class="adv-box-1">
+                            <a href="http://hd.meizu.com/yuyue/meizu16xs.html" class="box-img box-img-retina" target="_blank">
+                                <img class="lazy" data-original="../img/p1.png">
+                                <em>魅族  16Xs</em>
+                                <p>预约赢新机</p>
+                            </a>
+                        </li>
+                        <li class="adv-box-2">
+                            <a href="https://detail.meizu.com/item/meizu16s.html" class="box-img box-img-retina" target="_blank">
+                                <img class="lazy" data-original="../img/p2.png">
+                                <em>魅族 16s </em>
+                                <p>立即购买</p>
+                            </a>
+                        </li>
+                        <li class="adv-box-3">
+                            <a href="https://detail.meizu.com/item/meizunote9.html" class="box-img box-img-retina" target="_blank">
+                                <img class="lazy" data-original="../img/p3.jpg">
+                                <em>魅族 Note9</em>
+                                <p>立即购买</p>
+                            </a>
+                        </li>
+                        <li class="adv-box-4 last">
+                            <a href="http://mcycle.meizu.com/" class="box-img box-img-retina" target="_blank">
+                                <img class="lazy" data-original="../img/p4.jpg">
+                                <em>以旧换新</em>
+                                <p>免费寄件 专业检测</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 魅族手机 -->
+        <div class="index-phone-center" id="index-phone-center">
+            <div class="section-box section-phone-box">
+                <div class="section-title">
+                    <h3>魅族手机</h3>
+                </div>
+                <div class="section-box-adv">
+                    <a class="mei-adv" href="https://detail.meizu.com/item/meizu16x.html" target="_blank" style="background-image: url(../img/phone.jpg);"></a>
+                </div>
+                <div class="section-box-row">
+                    <div class="index-center-wrapper">
+                        <ul class="clearfix">
+                            <li class="big big1">
+                                <div class="section-item-box goods-box">
+                                    <a class="box-img box-img-retina" href="https://detail.meizu.com/item/meizu16xs.html" target="_blank">
+                                        <img class="goods-img lazy-img lazy" data-original="../img/Cgbj0FzvRKyAcTmAAAiLh3fsE44680.png">
+                                        <span class="box-info">
+                                        <span class="goods-name">魅族 16Xs</span>
+                                        <span class="goods-desc">4800W AI三摄 | 屏幕下指纹</span>
+                                        <span class="goods-price"> <i>￥</i>1698<em></em> </span>
+                                        </span>
+                                        <span class="product-sign red">新品</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="big big2">
+                                <div class="section-item-box goods-box">
+                                    <a class="box-img box-img-retina" href="https://detail.meizu.com/item/meizu16s.html" target="_blank">
+                                        <img class="goods-img lazy-img lazy" data-original="../img/Cgbj0VzaXQqAMN2pAAa47vx50YU413.png">
+                                        <span class="box-info">
+                                        <span class="goods-name">魅族 16s</span>
+                                        <span class="goods-desc">骁龙855 4800W光学防抖</span>
+                                        <span class="goods-price"> <i>￥</i>3198<em></em> </span>
+                                        </span>
+                                        <span class="product-sign red">新品</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="Phone3">
+                                <div class="section-item-box goods-box">
+                                    <a class="box-img box-img-retina" href="https://detail.meizu.com/item/meizunote9.html" target="_blank">
+                                        <img class="goods-img lazy-img lazy" data-original="../img/Cgbj0Vx_ZK6AaEObAAa1DJqn7us376.png">
+                                        <span class="box-info">
+                                                <span class="goods-name">魅族 Note9</span>
+                                        <span class="goods-desc">骁龙675 后置4800万</span>
+                                        <span class="goods-price"> <i>￥</i>1398<em></em> </span>
+                                        </span>
+                                        <span class="product-sign red">热卖</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="Phone4">
+                                <div class="section-item-box goods-box">
+                                    <a class="box-img box-img-retina" href="https://detail.meizu.com/item/meizu16th.html" target="_blank">
+                                        <img class="goods-img lazy-img lazy" data-original="../img/Cgbj0VtqgmyADfzUAAdk_Uz-jKk371.png">
+                                        <span class="box-info">
+                                                <span class="goods-name">魅族 16th</span>
+                                        <span class="goods-desc">骁龙845 屏幕下指纹</span>
+                                        <span class="goods-price"> <i>￥</i>2298<em></em> </span>
+                                        </span>
+                                        <span class="product-sign blue">领券</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="Phone5">
+                                <div class="section-item-box goods-box">
+                                    <a class="box-img box-img-retina" href="https://detail.meizu.com/item/meizu16thplus.html" target="_blank">
+                                        <img class="goods-img lazy-img lazy" data-original="../img/Cgbj0FtqgkWALkhxAAkE5Uiy2no917.png">
+                                        <span class="box-info">
+                                                <span class="goods-name">魅族 16th Plus</span>
+                                        <span class="goods-desc">骁龙845 屏幕下指纹</span>
+                                        <span class="goods-price"> <i>￥</i>2698<em></em> </span>
+                                        </span>
+                                        <span class="product-sign blue">领券</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="Phone6 last">
+                                <div class="section-item-box goods-box">
+                                    <a class="box-img box-img-retina" href="https://detail.meizu.com/item/meizux8.html" target="_blank">
+                                        <img class="goods-img lazy-img lazy" data-original="../img/Cgbj0FusSK2AQZgiAAlFKHoO-co889.png">
+                                        <span class="box-info">
+                                                <span class="goods-name">魅族 X8</span>
+                                        <span class="goods-desc">人脸指纹双解锁 旗舰双摄</span>
+                                        <span class="goods-price"> <i>￥</i>1298<em></em> </span>
+                                        </span>
+                                        <span class="product-sign blue">领券</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="Phone7">
+                                <div class="section-item-box goods-box">
+                                    <a class="box-img box-img-retina" href="https://detail.meizu.com/item/meizu16x.html" target="_blank">
+                                        <img class="goods-img lazy-img lazy" data-original="../img/Cgbj0VvINL-AGM20AAw4GirVtYA698.png">
+                                        <span class="box-info">
+                                                <span class="goods-name">魅族 16 X</span>
+                                        <span class="goods-desc">骁龙710 屏幕下指纹 旗舰双摄</span>
+                                        <span class="goods-price"> <i>￥</i>1798<em></em> </span>
+                                        </span>
+                                        <span class="product-sign blue">领券</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="Phone8">
+                                <div class="section-item-box goods-box">
+                                    <a class="box-img box-img-retina" href="https://detail.meizu.com/item/meizuv8.html" target="_blank">
+                                        <img class="goods-img lazy-img lazy" data-original="../img/Cgbj0VujaMyAYB76AATj19tgy08068.png">
+                                        <span class="box-info">
+                                                <span class="goods-name">魅族 V8 高配版</span>
+                                        <span class="goods-desc">1200万+500万高清双摄</span>
+                                        <span class="goods-price"> <i>￥</i>898<em></em> </span>
+                                        </span>
+                                        <span class="product-sign blue">领券</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="Phone9">
+                                <div class="section-item-box goods-box">
+                                    <a class="box-img box-img-retina" href="https://detail.meizu.com/item/meizunote8.html" target="_blank">
+                                        <img class="goods-img lazy-img lazy" data-original="../img/Cgbj0VvQPnuAAwPPAAMv8zzt2DE910.png">
+                                        <span class="box-info">
+                                                <span class="goods-name">魅族 Note8</span>
+                                        <span class="goods-desc">全像素双核对焦 大电池长续航</span>
+                                        <span class="goods-price"> <i>￥</i>999<em></em> </span>
+                                        </span>
+                                        <span class="product-sign blue">领券</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="Phone10 last">
+                                <div class="section-item-box goods-box">
+                                    <a class="box-img box-img-retina" href="https://detail.meizu.com/item/meizu15.html" target="_blank">
+                                        <img class="goods-img lazy-img lazy" data-original="../img/Cgbj0FrcbkeAW38NAAjvsXhhyFE066.png">
+                                        <span class="box-info">
+                                                <span class="goods-name">魅族 15</span>
+                                        <span class="goods-desc">骁龙660 2000万暗光双摄</span>
+                                        <span class="goods-price"> <i>￥</i>1498<em></em> </span>
+                                        </span>
+                                        <span class="product-sign blue">领券</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 魅族手机结束 -->
+    </div>
+
+    <!-- main结束 -->
+
+
     <!-- footer -->
     <div id="footer" class="footer">
         <div class="footer-mid">
@@ -645,46 +847,46 @@
                                                 </a>                        
                                             </span>
                                         <div class="modal-lang-body" id="modal-lang-body-footer">
-                                            <ul id="lang_list_" class="lang_list_" style="display: none;">
+                                            <ul id="lang_list_" class="lang_list_">
                                                 <li class="footerLi">
-                                                    <a href="javascript:;" data-lang="/index.html" data-countryhref="https://www.meizu.com/index.html">
-                                                        <i style="background-image:url(https://fms.res.meizu.com/dms/2017/12/18/1c31db15-ab85-4932-8e6c-edfd6039bc60.png);background-position: 0 0;" class="lang-logo lang-logo-index.html"></i>
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo.png);background-position: 0 0;" class="lang-logo lang-logo-index.html"></i>
                                                         <span>简体中文</span>
                                                     </a>
                                                 </li>
                                                 <li class="footerLi">
-                                                    <a href="javascript:;" data-lang="/hk/" data-countryhref="https://www.meizu.com/hk">
-                                                        <i style="background-image:url(https://fms.res.meizu.com/dms/2017/12/18/85fba643-95ca-4db1-991c-43e66f108afb.png);background-position: 0 0;" class="lang-logo lang-logo-hk/"></i>
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo1.png);background-position: 0 0;" class="lang-logo lang-logo-hk/"></i>
                                                         <span>繁體中文</span>
                                                     </a>
                                                 </li>
                                                 <li class="footerLi">
-                                                    <a href="javascript:;" data-lang="/en/" data-countryhref="https://www.meizu.com/en">
-                                                        <i style="background-image:url(https://www3.res.meizu.com/static/cn/icon-en/f9C63F21yJxwMNvsqRSTpnWlkiahgBue.png);background-position: 0 0;" class="lang-logo lang-logo-en/"></i>
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo2.png);background-position: 0 0;" class="lang-logo lang-logo-en/"></i>
                                                         <span>English</span>
                                                     </a>
                                                 </li>
                                                 <li class="footerLi">
-                                                    <a href="javascript:;" data-lang="/ru" data-countryhref="https://www.meizu.com/ru/">
-                                                        <i style="background-image:url(https://fms.res.meizu.com/dms/2017/12/18/e743e97c-71af-4853-a91d-bd81c2d3a31c.png);background-position: 0 0;" class="lang-logo lang-logo-ru"></i>
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo3.png);background-position: 0 0;" class="lang-logo lang-logo-ru"></i>
                                                         <span>Русский</span>
                                                     </a>
                                                 </li>
                                                 <li class="footerLi">
-                                                    <a href="javascript:;" data-lang="/ua" data-countryhref="https://www.meizuclub.com.ua">
-                                                        <i style="background-image:url(https://fms.res.meizu.com/dms/2017/12/18/f6b0d26b-e9ac-45a9-8b7f-0c4840a627c1.png);background-position: 0 0;" class="lang-logo lang-logo-ua"></i>
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo4.png);background-position: 0 0;" class="lang-logo lang-logo-ua"></i>
                                                         <span>Україна</span>
                                                     </a>
                                                 </li>
                                                 <li class="footerLi">
-                                                    <a href="javascript:;" data-lang="/tr" data-countryhref="https://www.meizu-tr.com/ ">
-                                                        <i style="background-image:url(https://fms.res.meizu.com/dms/2017/12/20/062710b5-2f96-4402-ad27-822af5b4f993.png);background-position: 0 0;" class="lang-logo lang-logo-tr"></i>
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo5.png);background-position: 0 0;" class="lang-logo lang-logo-tr"></i>
                                                         <span>Türkiye</span>
                                                     </a>
                                                 </li>
                                                 <li class="footerLi">
-                                                    <a href="javascript:;" data-lang="/in" data-countryhref="http://meizuindia.com/">
-                                                        <i style="background-image:url(https://fms.res.meizu.com/dms/2017/12/18/022b228e-19a7-4227-b686-e23ae231d3b5.png);background-position: 0 0;" class="lang-logo lang-logo-in"></i>
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo6.png);background-position: 0 0;" class="lang-logo lang-logo-in"></i>
                                                         <span>India</span>
                                                     </a>
                                                 </li>

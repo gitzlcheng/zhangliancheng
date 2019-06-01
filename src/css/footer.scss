@@ -1,226 +1,291 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: #515151;
-}
-
-img {
-    border: 0;
-}
-
-#footer {
-    margin: 0;
-    padding: 0;
-    z-index: 999;
-    font-size: 14px;
-    color: #515151;
-    position: relative;
-    background-color: #fff;
-    .footer-mid {
-        padding: 48px 0 20px;
-        border-top: 1px solid #f1f1f1;
-        a {
-            line-height: 27px;
-            font-size: 12px;
-            color: #666;
-        }
-        a:hover {
-            color: #31a5e7!important;
-        }
-        .footer-wrap {
-            max-width: 1240px;
-            margin: 0 auto;
-            .meizu-row {
-                max-width: 1240px;
-                position: relative;
-                .footer-service {
-                    width: 1000px;
-                    float: left;
-                    li {
-                        float: left;
-                        text-align: center;
-                        width: 15%;
+                        * {
+                            padding: 0;
+                            margin: 0;
+                        }
+                        
+                        ul {
+                            list-style: none;
+                        }
+                        
                         a {
+                            text-decoration: none;
+                            color: #515151;
+                        }
+                        
+                        img {
+                            border: 0;
+                        }
+                        
+                        #footer {
+                            margin: 0;
+                            padding: 0;
+                            z-index: 999;
+                            font-size: 14px;
+                            color: #515151;
+                            position: relative;
+                            background-color: #fff;
+                            .footer-mid {
+                                padding: 48px 0 20px;
+                                border-top: 1px solid #f1f1f1;
+                                a {
+                                    line-height: 27px;
+                                    font-size: 12px;
+                                    color: #666;
+                                }
+                                a:hover {
+                                    color: #31a5e7!important;
+                                }
+                                .footer-wrap {
+                                    max-width: 1240px;
+                                    margin: 0 auto;
+                                    .meizu-row {
+                                        max-width: 1240px;
+                                        position: relative;
+                                        .footer-service {
+                                            width: 1000px;
+                                            float: left;
+                                            li {
+                                                float: left;
+                                                text-align: center;
+                                                width: 15%;
+                                                a {
+                                                    display: block;
+                                                    overflow: hidden;
+                                                    img {
+                                                        width: 50px;
+                                                        display: block;
+                                                        margin: 0 auto;
+                                                    }
+                                                    span {
+                                                        line-height: 30px;
+                                                        color: #999;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .onlive-server {
+                                            float: right;
+                                            text-align: right;
+                                            margin-top: -18px;
+                                            span {
+                                                color: #999;
+                                                font-size: 12px;
+                                                line-height: 30px;
+                                            }
+                                            .tel {
+                                                color: #00c3f5;
+                                                font-size: 25px;
+                                                font-weight: 400;
+                                                margin-top: -6px;
+                                                line-height: 40px;
+                                            }
+                                            .onlive-btn {
+                                                height: 30px;
+                                                padding: 0 16px;
+                                                overflow: hidden;
+                                                position: relative;
+                                                text-align: center;
+                                                line-height: 30px;
+                                                color: #fff;
+                                                border-radius: 20px;
+                                                margin-top: 3px;
+                                                display: inline-block;
+                                                font-size: 14px;
+                                                background: #0bbbef;
+                                            }
+                                        }
+                                    }
+                                    .meizu-row:after {
+                                        content: '';
+                                        display: block;
+                                        clear: both;
+                                        height: 0;
+                                    }
+                                    .footer-hr {
+                                        margin: 10px auto 28px;
+                                        display: block;
+                                        height: 1px;
+                                        border: 0;
+                                        border-top: 1px solid #eee;
+                                        padding: 0;
+                                    }
+                                    .footer-co .footer-info-left {
+                                        float: left;
+                                        .clearfix:before {
+                                            content: "";
+                                            display: table;
+                                            height: 0;
+                                            clear: both;
+                                            visibility: hidden;
+                                        }
+                                        #footer-links li {
+                                            padding-right: 15px;
+                                            border-right: 1px solid #d6d6d6;
+                                            float: left;
+                                            height: 18px;
+                                            margin-right: 15px;
+                                            a {
+                                                display: block;
+                                                line-height: 18px;
+                                            }
+                                            .meizu-footer-language {
+                                                a {
+                                                    position: relative;
+                                                    display: block;
+                                                    padding-left: 24px;
+                                                    line-height: 18px;
+                                                    i {
+                                                        position: absolute;
+                                                        width: 18px;
+                                                        height: 18px;
+                                                        top: 0;
+                                                        left: 0;
+                                                        background-image: url(../img/download.png);
+                                                        background-repeat: no-repeat;
+                                                        background-size: cover;
+                                                        background-position: 0 0;
+                                                    }
+                                                }
+                                            }
+                                            #modal-lang-body-footer {
+                                                padding-bottom: 12px;
+                                                position: absolute;
+                                                bottom: 50px;
+                                                right: 300px;
+                                            }
+                                        }
+                                        .footer-certificate {
+                                            padding-top: 8px;
+                                            color: #999;
+                                            text-align: left;
+                                            font-size: 12px;
+                                            a {
+                                                margin: 0 3px;
+                                            }
+                                            .footer-info-record {
+                                                margin: 0 6px;
+                                                i {
+                                                    width: 14px;
+                                                    background-image: url(../img/down.png);
+                                                }
+                                            }
+                                            .footer-info-license i {
+                                                width: 20px;
+                                                background-image: url(../img/down1.png);
+                                            }
+                                            .footer-info-wel i {
+                                                width: 20px;
+                                                background-image: url(../img/down2.png);
+                                            }
+                                            .footer-info-trust i {
+                                                width: 25px;
+                                                background-image: url(../img/down3.png);
+                                            }
+                                            i {
+                                                position: relative;
+                                                top: 4px;
+                                                *top: 2px;
+                                                display: inline-block;
+                                                height: 18px;
+                                                background-position: center center;
+                                                background-repeat: no-repeat;
+                                            }
+                                        }
+                                    }
+                                    a {
+                                        color: #999;
+                                    }
+                                    #ii-subscribe {
+                                        float: right;
+                                        margin-top: 25px;
+                                        position: relative;
+                                        a img {
+                                            position: absolute;
+                                            bottom: 40px;
+                                            left: -10px;
+                                            width: 180px;
+                                        }
+                                        .ii-subscribe-img {
+                                            display: inline-block;
+                                            width: 21px;
+                                            height: 18px;
+                                            position: relative;
+                                            top: 4px;
+                                            *top: 2px;
+                                            background-repeat: no-repeat;
+                                            background-position: center center;
+                                        }
+                                        a em {
+                                            width: 21px;
+                                            height: 18px;
+                                            background-size: 96%;
+                                            display: inline-block;
+                                            position: relative;
+                                            top: 4px;
+                                            *top: 2px;
+                                            background-repeat: no-repeat;
+                                            background-position: center center;
+                                        }
+                                        .ii-hr {
+                                            display: inline-block;
+                                            width: 1px;
+                                            height: 14px;
+                                            background: #eee;
+                                            margin: 0 10px;
+                                            position: relative;
+                                            top: 5px;
+                                            *top: 3px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        .lang_list_ {
+                            display: none;
+                            // height: 156px;
+                            width: 120px;
+                            background: #fff;
+                            border: 1px #f1f1f1 solid;
+                            z-index: 999;
+                            li {
+                                padding-right: 15px;
+                                border-right: 1px solid #d6d6d6;
+                                float: left;
+                                height: 18px;
+                                margin-right: 15px;
+                                a {
+                                    display: block;
+                                    line-height: 18px;
+                                    float: left;
+                                    i {
+                                        vertical-align: middle;
+                                        display: inline-block;
+                                        width: 30px!important;
+                                        height: 24px;
+                                        background-repeat: no-repeat;
+                                        background-size: contain!important;
+                                    }
+                                    span {
+                                        display: inline-block;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        .lang_list_ li {
+                            padding: 0;
+                            margin: 0;
+                            height: 37px!important;
+                            width: 83%;
+                            padding-left: 10px;
+                            padding-top: 2px;
+                            background: #fff;
+                            margin-right: 0!important;
+                            border: 0!important;
+                            padding-right: 4px!important;
+                        }
+                        
+                        .no-border:hover>div ul {
                             display: block;
-                            overflow: hidden;
-                            img {
-                                width: 50px;
-                                display: block;
-                                margin: 0 auto;
-                            }
-                            span {
-                                line-height: 30px;
-                                color: #999;
-                            }
                         }
-                    }
-                }
-                .onlive-server {
-                    float: right;
-                    text-align: right;
-                    margin-top: -18px;
-                    span {
-                        color: #999;
-                        font-size: 12px;
-                        line-height: 30px;
-                    }
-                    .tel {
-                        color: #00c3f5;
-                        font-size: 25px;
-                        font-weight: 400;
-                        margin-top: -6px;
-                        line-height: 40px;
-                    }
-                    .onlive-btn {
-                        height: 30px;
-                        padding: 0 16px;
-                        overflow: hidden;
-                        position: relative;
-                        text-align: center;
-                        line-height: 30px;
-                        color: #fff;
-                        border-radius: 20px;
-                        margin-top: 3px;
-                        display: inline-block;
-                        font-size: 14px;
-                        background: #0bbbef;
-                    }
-                }
-            }
-            .meizu-row:after {
-                content: '';
-                display: block;
-                clear: both;
-                height: 0;
-            }
-            .footer-hr {
-                margin: 10px auto 28px;
-                display: block;
-                height: 1px;
-                border: 0;
-                border-top: 1px solid #eee;
-                padding: 0;
-            }
-            .footer-co .footer-info-left {
-                float: left;
-                .clearfix:before {
-                    content: "";
-                    display: table;
-                    height: 0;
-                    clear: both;
-                    visibility: hidden;
-                }
-                #footer-links li {
-                    padding-right: 15px;
-                    border-right: 1px solid #d6d6d6;
-                    float: left;
-                    height: 18px;
-                    margin-right: 15px;
-                    a {
-                        display: block;
-                        line-height: 18px;
-                    }
-                }
-                .footer-certificate {
-                    padding-top: 8px;
-                    color: #999;
-                    text-align: left;
-                    font-size: 12px;
-                    a {
-                        margin: 0 3px;
-                    }
-                    .footer-info-record {
-                        margin: 0 6px;
-                        i {
-                            width: 14px;
-                            background-image: url(../img/down.png);
-                        }
-                    }
-                    .footer-info-license i {
-                        width: 20px;
-                        background-image: url(../img/down1.png);
-                    }
-                    .footer-info-wel i {
-                        width: 20px;
-                        background-image: url(../img/down2.png);
-                    }
-                    .footer-info-trust i {
-                        width: 25px;
-                        background-image: url(../img/down3.png);
-                    }
-                    i {
-                        position: relative;
-                        top: 4px;
-                        *top: 2px;
-                        display: inline-block;
-                        height: 18px;
-                        background-position: center center;
-                        background-repeat: no-repeat;
-                    }
-                }
-            }
-            a {
-                color: #999;
-            }
-            #ii-subscribe {
-                float: right;
-                margin-top: 25px;
-                position: relative;
-                a img {
-                    position: absolute;
-                    bottom: 40px;
-                    left: -10px;
-                    width: 180px;
-                    // display: none;
-                }
-                .ii-subscribe-img {
-                    display: inline-block;
-                    width: 21px;
-                    height: 18px;
-                    position: relative;
-                    top: 4px;
-                    *top: 2px;
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                }
-                a em {
-                    width: 21px;
-                    height: 18px;
-                    background-size: 96%;
-                    display: inline-block;
-                    position: relative;
-                    top: 4px;
-                    *top: 2px;
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                }
-                .ii-hr {
-                    display: inline-block;
-                    width: 1px;
-                    height: 14px;
-                    background: #eee;
-                    margin: 0 10px;
-                    position: relative;
-                    top: 5px;
-                    *top: 3px;
-                    // background-image: 
-                    // background: transparent
-                }
-                // &>a:hover i {
-                //     display: none;
-                // }
-                // &>a:hover em {
-                //     display: inline-block!important;
-                // }
-            }
-        }
-    }
-}
