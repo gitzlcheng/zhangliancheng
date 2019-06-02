@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/shopping cart.min.css">
+    <link rel="stylesheet" href="../css/footer.min.css">
+    <script src="../js/jquery.lazyload.min.js"></script>
+</head>
+
+<body>
+    <!-- head -->
+    <div class="shopping-header clearfix">
+        <div class="mzcontainer">
+            <div class="layout-header-logo">
+                <a target="_blank" href="http://www.meizu.com" class="layout-header-logo-link" alt="魅族科技">
+                    <img src="../img/logo.png" style="max-width:125px;margin-top:  28px;">
+                </a>
+            </div>
+            <ul class="layout-header-bread">
+                <li class="layout-header-bread-block active">购物车</li>
+                <li class="layout-header-bread-block ">确认订单</li>
+                <li class="layout-header-bread-block ">在线支付</li>
+                <li class="layout-header-bread-block ">完成</li>
+            </ul>
+            <ul class="layout-header-right">
+                <li class="layout-header-right-item">
+                    <a class="layout-header-right-link" href="//ordercenter.meizu.com/list/index.html" target="_blank">我的订单</a>
+                </li>
+                <li class="layout-header-right-item signout">
+                    <a class="layout-header-right-link" href="javascript:window.location.href='https://login.flyme.cn/vCodeLogin">登录</a>
+                </li>
+                <li class="layout-header-right-item signout">
+                    <a class="layout-header-right-link" target="_blank" href="//member.meizu.com/register">注册</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- head 结束 -->
+
+    <!-- main -->
+    <div class="cart">
+        <div class="cart-login-tips show" id="cartLoginTips">
+            <i class="cart-login-tips-icon"></i> 您还没有登录！登录后可显示您账号中已加入的商品哦~
+            <a class="mz-btn" href="javascript:void(0);">
+                去登录
+              </a>
+            <div class="close-tips" id="closeTips"></div>
+        </div>
+
+        <div class="mzcontainer">
+            <table class="cart-header">
+                <tbody>
+                    <tr>
+                        <td class="cart-col-select">
+                            <div class="cart-select-all">
+                                <input type="checkbox" name="checkall" id="checkall">
+                                <span class="cart-select-title">全选</span>
+                            </div>
+                        </td>
+                        <td class="cart-col-price">单价(元)</td>
+                        <td class="cart-col-number">数量</td>
+                        <td class="cart-col-total">小计(元)</td>
+                        <td class="cart-col-ctrl" id="J-cartHearCtrl">编辑</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul class="cart-merchant-list" id="merchantList">
+                <li class="cart-merchant">
+                    <table class="cart-merchant-body">
+                        <tr class="cart-more-buy">
+                            <td class="cart-product-buy" colspan="5">
+                                <div class="more-buy-tag">
+                                    <span>加价购</span>
+                                </div>
+                                <span class="more-buy-tips">另加15元起，即可换购超值商品</span>
+                                <span class="more-buy-skip">立即加购 &gt;</span>
+                            </td>
+                        </tr>
+                        <tr class="cart-product">
+                            <td class="cart-col-select">
+                                <input type="checkbox" name="checkbox" id="checkbox">
+                                <a href="#" class="cart-product-link" target="_blank">
+                                    <img class="cart-product-img " alt="魅族 16th " src="../img/shoppingcart.png " style="display: inline; ">
+                                </a>
+                                <a href="# " class="cart-product-link cart-product-info" target="_blank ">
+                                    <p class="cart-product-item-name">魅族 16th</p>
+                                    <p class="cart-product-desc">全网通公开版 静夜黑 6+64GB</p>
+                                </a>
+                            </td>
+                            <td class="cart-col-price">
+                                <p>
+                                    <span class="cart-product-price"><i>￥</i>2298.00</span>
+                                </p>
+                            </td>
+                            <td class="cart-col-number">
+                                <div class="cart-product-number-adder">
+                                    <p class="cart-product-number-max show">
+                                    </p>
+                                    <div class="mz-adder ">
+                                        <button class="mz-adder-subtract disabled">-</button>
+                                        <div class="mz-adder-num">
+                                            <input type="text " class="mz-adder-input" value="1 ">
+                                        </div>
+                                        <button class="mz-adder-add">+</button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cart-col-total">
+                                <span class="cart-product-price">
+                                    <i>￥</i>2298.00
+                                </span>
+                            </td>
+                            <td class="cart-col-ctrl">
+                                <div class="cart-product-remove">--</div>
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+        </div>
+
+        <div class="cart-footer " id="cartFooter ">
+            <div class="mzcontainer ">
+                <div class="cart-footer-left ">
+                    <div class="cart-select-all">
+                        <input type="checkbox" name="checkall" id="checkall">
+                        <span class="cart-select-title ">全选</span>
+                    </div>
+                    <span class="cart-remove-selected">删除选中的商品</span>
+                    <span class="cart-footer-count ">
+                    共<span class="cart-footer-num">1</span>件商品， 已选择
+                    <span class="cart-footer-num blue ">1</span>件
+                    </span>
+                </div>
+                <div class="cart-footer-right">
+                    <span class="cart-footer-sum">
+                    已优惠<span class="cart-footer-num red">0.00</span>元， 合计(不含运费)：
+                    <span class="cart-footer-total"><i>￥</i>2298.00</span>
+                    </span>
+                    <div class="mz-btn success to-order-btn">
+                        去结算
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- main结束 -->
+    <!-- footer -->
+    <div id="footer" class="footer">
+        <div class="footer-mid">
+            <div class="footer-wrap">
+                <div class="meizu-row">
+                    <ul class="footer-service">
+                        <li>
+                            <a href="http://service.meizu.com/help/delivery.html" target="_blank">
+                                <img src="../img/f-1.png">
+                                <span>满80免运费</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://store.meizu.com/marrive/summary.html" target="_blank">
+                                <img src="../img/f-2.png">
+                                <span>100+ 城市次日送达</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://service.meizu.com/help/after_ser.html" target="_blank">
+                                <img src="../img/f-3.png">
+                                <span>7天无理由退货</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://service.meizu.com/help/after_ser.html" target="_blank">
+                                <img src="../img/f-4.png">
+                                <span>15天换货保障</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://service.meizu.com/help/after_ser.html" target="_blank">
+                                <img src="../img/f-5.png">
+                                <span>1年免费保修</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://service.meizu.com/repair/home/profile.html" target="_blank">
+                                <img src="../img/f-6.png">
+                                <span>上门快修</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="onlive-server">
+                        <span>周一至周日 7:30-24:00</span>
+                        <p class="tel">400-788-3333</p>
+                        <a class="onlive-btn" href="http://url.meizu.com/ols_PC" target="_blank">在线客服</a>
+                    </div>
+                </div>
+                <hr class="footer-hr">
+                <div class="footer-co">
+                    <div class="meizu-row">
+                        <div class="footer-info">
+                            <div class="footer-info-left">
+                                <ul class="clearfix" id="footer-links">
+                                    <li>
+                                        <a href="https://www.meizu.com/about.html" target="_blank">了解魅族</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://hr.meizu.com/" target="_blank">加入我们</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.meizu.com/about.html" target="_blank">联系我们</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.flyme.cn/index.html" target="_blank">Flyme</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://bbs.meizu.cn/" target="_blank">魅族社区</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://meizu.tmall.com/" target="_blank">天猫旗舰店</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.meizu.com/feedback.html" target="_blank">问题反馈</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.meizu.com/authorization.html" target="_blank">线上销售授权名单公示</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://cimg2.res.meizu.com/www/meizu/publish_license.pdf" target="_blank">出版物经营许可证</a>
+                                    </li>
+                                    <li class="no-border meizu-footer-langList" id="meizu-footer-langList">
+                                        <span id="meizu-footer-language" class="meizu-footer-language">                     
+                                                    <a class="button-language" href="javascript:void(0);">               
+                                                    <i class="icon-lang-logo icon-lang-logo-cn"></i>
+                                                    简体中文    
+                                                    </a>                        
+                                                </span>
+                                        <div class="modal-lang-body" id="modal-lang-body-footer">
+                                            <ul id="lang_list_" class="lang_list_">
+                                                <li class="footerLi">
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo.png);background-position: 0 0;" class="lang-logo lang-logo-index.html"></i>
+                                                        <span>简体中文</span>
+                                                    </a>
+                                                </li>
+                                                <li class="footerLi">
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo1.png);background-position: 0 0;" class="lang-logo lang-logo-hk/"></i>
+                                                        <span>繁體中文</span>
+                                                    </a>
+                                                </li>
+                                                <li class="footerLi">
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo2.png);background-position: 0 0;" class="lang-logo lang-logo-en/"></i>
+                                                        <span>English</span>
+                                                    </a>
+                                                </li>
+                                                <li class="footerLi">
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo3.png);background-position: 0 0;" class="lang-logo lang-logo-ru"></i>
+                                                        <span>Русский</span>
+                                                    </a>
+                                                </li>
+                                                <li class="footerLi">
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo4.png);background-position: 0 0;" class="lang-logo lang-logo-ua"></i>
+                                                        <span>Україна</span>
+                                                    </a>
+                                                </li>
+                                                <li class="footerLi">
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo5.png);background-position: 0 0;" class="lang-logo lang-logo-tr"></i>
+                                                        <span>Türkiye</span>
+                                                    </a>
+                                                </li>
+                                                <li class="footerLi">
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo6.png);background-position: 0 0;" class="lang-logo lang-logo-in"></i>
+                                                        <span>India</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="meizu-footer-language-wp clearfix"></div>
+                                <div class="footer-certificate">
+                                    ©2019 Meizu Telecom Equipment Co., Ltd. All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a target="_blank" href="http://www.miitbeian.gov.cn/" hidefocus="true">粤ICP备13003602号</a>
+                                    <a target="_blank" href="//www3.res.meizu.com/static/cn/_partial/footer/images/icp2_fb8db74.jpg" hidefocus="true">合字B2-20170010 </a>
+                                    <a target="_blank" href="//www3.res.meizu.com/static/cn/_partial/footer/images/com_licence_b00fe42.jpg" hidefocus="true">营业执照</a>
+                                    <a target="_blank" href="https://www.meizu.com/legal.html" hidefocus="true">法律声明</a>
+                                    <span class="footer-info-record" target="_blank" href="">
+                                                <i></i>
+                                                粤公网安备 44049102496009 号
+                                            </span>
+                                    <a class="footer-info-license" target="_blank" rel="nofollow" href="http://210.76.65.188/" hidefocus="true">
+                                        <i></i>
+                                    </a>
+                                    <a class="footer-info-wel" target="_blank" rel="nofollow" href="http://210.76.65.188/webrecord/innernet/Welcome.jsp" hidefocus="true">
+                                        <i></i>
+                                    </a>
+                                    <a class="footer-info-trust" target="_blank" rel="nofollow" href="https://credit.szfw.org/CX20151204012550820380.html" hidefocus="true">
+                                        <i></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="ii-subscribe" class="wbtubiao">
+                                <a href="javascript:;" target="_blank">
+                                    <img src="../img/small.png" alt="" style="display: none;">
+                                    <i class="ii-subscribe-img " style="background-size:96%;background-image:url(../img/3b085af8-a47b-453c-b147-a4b352fb3a14.png)"></i>
+                                </a>
+                                <span class="ii-hr"></span>
+                                <a href="javascript:;" target="_blank">
+                                    <img src="../img/small1.jpg" alt="" style="display: none;">
+                                    <i class="ii-subscribe-img " style="background-size: 96%; background-image: url(../img/58e3e041-5543-4414-aaf1-d8e1fd539af6.png);"></i>
+                                </a>
+                                <span class="ii-hr"></span>
+                                <a href="https://user.qzone.qq.com/2762957059" target="_blank">
+                                    <i class="ii-subscribe-img " style="background-size: 96%; background-image: url(../img/52cba4a4-b3a6-4522-9883-d3a918e7d4a9.png);"></i>
+                                </a>
+                                <span class="ii-hr"></span>
+                                <a href="https://weibo.com/meizumobile" target="_blank">
+                                    <i class="ii-subscribe-img " style="background-size: 96%; background-image: url(../img/bcccf9d2-e0e5-441b-b4a3-f78c12bc3933.png);"> </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.wbtubiao>a:nth-of-type(1)').hover(function() {
+                $(this).children('i').css('background-image', 'url(../img/6721704b-7b6d-445d-a025-e33649e5db74.png)');
+                $(this).children('img').css('display', 'block');
+            },
+            function() {
+                $(this).children('i').css('background-image', 'url(../img/3b085af8-a47b-453c-b147-a4b352fb3a14.png)');
+                $(this).children('img').css('display', 'none');
+            });
+        $('.wbtubiao>a:nth-of-type(2)').hover(function() {
+                $(this).children('i').css('background-image', 'url(../img/cb0d00dc-41f7-4339-a0b3-25ee7dca1d4a.png)');
+                $(this).children('img').css('display', 'block');
+            },
+            function() {
+                $(this).children('i').css('background-image', 'url(../img/58e3e041-5543-4414-aaf1-d8e1fd539af6.png)');
+                $(this).children('img').css('display', 'none');
+            })
+        $('.wbtubiao>a:nth-of-type(3)').hover(function() {
+                $(this).children('i').css('background-image', 'url(../img/aff10988-6493-49c0-961a-0c91eae603b4.png)');
+            },
+            function() {
+                $(this).children('i').css('background-image', 'url(../img/52cba4a4-b3a6-4522-9883-d3a918e7d4a9.png)');
+            })
+        $('.wbtubiao>a:nth-of-type(4)').hover(function() {
+                $(this).children('i').css('background-image', 'url(../img/7df8d821-a5c4-4619-9981-04e31db6e3de.png)');
+            },
+            function() {
+                $(this).children('i').css('background-image', 'url(../img/bcccf9d2-e0e5-441b-b4a3-f78c12bc3933.png)');
+            })
+    </script>
+    <!-- footer结束 -->
+</body>
+
+</html>

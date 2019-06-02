@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/head.css">
+    <link rel="stylesheet" href="../css/footer.min.css">
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/contact.min.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="head">
+        <div class="head-center">
+            <!-- logo -->
+            <div class="meizu-header-logo">
+                <a href="https://www.meizu.com/index.html" class="meizu-header-logo-img">
+                    <svg fill="#00b4ff" version="1.1" id="Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="402.048px" height="73.556px" viewBox="17.318 5.824 402.048 73.556" enable-background="new 17.318 5.824 402.048 73.556"
+                        xml:space="preserve">
+                  <path d="M321.513,5.824H256.91v12.878h51.478l-49.294,44.581c-8.227,7.023-2.872,16.096,3.958,16.096h65.337V66.472
+                    h-52.117l48.964-44.554C333.52,14.473,328.535,5.824,321.513,5.824"></path>
+                  <rect x="226.517" y="5.824" width="14.426" height="73.556"></rect>
+                  <path d="M104.296,5.824h-71.36c-8.576,0-15.618,7.012-15.618,15.588v57.967H31.14V23.743
+                    c0-2.711,2.208-5.041,4.92-5.041h25.31v60.677h14.428V18.702h25.312c2.712,0,4.919,2.329,4.919,5.041v55.636h13.86V21.416
+                    C119.888,12.841,112.872,5.824,104.296,5.824"></path>
+                  <path d="M148.765,23.614c0-2.712,2.199-4.912,4.911-4.912h55.909V5.824h-58.236c-8.576,0-15.592,7.016-15.592,15.592
+                    v42.37c0,8.576,7.017,15.592,15.592,15.592h58.236V66.5h-55.909c-2.711,0-4.911-2.199-4.911-4.912V49.042h58.43V36.117h-58.43
+                    V23.614z"></path>
+                  <path d="M405.506,5.824v55.637c0,2.71-2.22,5.039-4.931,5.039h-39.77c-2.711,0-4.892-2.328-4.892-5.039V5.824h-13.86
+                    v57.963c0,8.576,7.018,15.592,15.592,15.592h46.127c8.575,0,15.592-7.017,15.592-15.592V5.824H405.506z"></path>
+                  </svg>
+                </a>
+            </div>
+            <!-- 购物车 -->
+            <a class="meizu-header-cart" href="https://cart.meizu.com/" target="_blank">
+                <em>0</em>
+            </a>
+            <!-- 登录图标 -->
+            <div class="meizu-header-user">
+                <div class="meizu-header-user-img">
+                    <img class="meizu-header-user-avatar" src="../img/icon-default-user_ef0354b.png" alt="log">
+                </div>
+                <!-- <div class="meizu-header-user-box" id="meizu-header-user-box" style="display: none;"></div> -->
+                <!-- 登录前 -->
+                <div class="meizu-header-user-trigger">
+                    <ul class="meizu-header-user-dropdown">
+                        <!-- 这个是bootstrap的图标三角形 -->
+                        <div class="glyphicon glyphicon-triangle-top xiaosj"> </div>
+                        <li>
+                            <a href="https://login.flyme.cn/vCodeLogin " target="_blank ">立即登录</a>
+                        </li>
+                        <li>
+                            <a href="https://i.flyme.cn/register " target="_blank ">立即注册</a></li>
+
+                        <li>
+                            <a href="http://ordercenter.meizu.com/list/index.html " target="_blank ">我的订单</a>
+                        </li>
+                        <li><a href="http://mformy.meizu.com/ " target="_blank ">M码通道</a></li>
+                    </ul>
+                </div>
+                <!-- 登录后 -->
+                <!-- <div class="meizu-header-user-trigger " id="_islogin " style="display: none; ">
+                    <ul class="meizu-header-user-dropdown " style="display: none; ">
+                        <li>
+                            <a href="https://member.meizu.com/uc/webjsp/member/detail?click=store_index_dh_mycenter_user&amp;click=click_store_index_dh_mycenter_user " target="_blank " data-mtype="store_index_dh_mycenter_user " data-bh="click_store_index_dh_mycenter_user ">个人中心</a>
+                        </li>
+                        <li>
+                          <a href="http://ordercenter.meizu.com/list/index.html?click=store_index_dh_mycenter_order_1&amp;click=click_store_index_dh_mycenter_order_1 " target="_blank " data-mtype="store_index_dh_mycenter_order_1 " data-bh="click_store_index_dh_mycenter_order_1 ">我的订单</a>
+                        </li>
+                        <li><a href="http://mformy.meizu.com/?click=store_index_dh_mycenter_mcode_1&amp;click=click_store_index_dh_mycenter_mcode_1 " target="_blank " data-mtype="store_index_dh_mycenter_mcode_1 " data-bh="click_store_index_dh_mycenter_mcode_1 ">M码通道</a></li>
+                        <li>
+                            <a href="https://www.meizu.com/#?click=store_index_dh_mycenter_out&amp;click=click_store_index_dh_mycenter_out " id="meizu-header-user-logout " data-mtype="store_index_dh_mycenter_out " class=" " data-bh="click_store_index_dh_mycenter_out ">退出登录</a>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+            <!-- 搜索框 -->
+            <div class="meizu-header-search ">
+                <input type="text " placeholder="魅族16s ">
+                <a>
+                    <svg width="17px " height="14px " viewBox="0 0 17 14 " version="1.1 " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink ">
+                      <g stroke="none " stroke-width="1 " fill="none " fill-rule="evenodd ">
+                          <g transform="translate(-1469.000000, -32.000000) " fill="#666666 " fill-rule="nonzero ">
+                              <g>
+                                  <g>
+                                      <g transform="translate(1323.000000, 25.000000) ">
+                                          <g transform="translate(139.000000, 0.000000) ">
+                                              <path d="M14,20.75 C10.2720779,20.75 7.25,17.7279221 7.25,14 C7.25,10.2720779 10.2720779,7.25 14,7.25 C17.7279221,7.25 20.75,10.2720779 20.75,14 C20.75,17.7279221 17.7279221,20.75 14,20.75 Z M14,19.25 C16.8994949,19.25
+                                19.25,16.8994949 19.25,14 C19.25,11.1005051 16.8994949,8.75 14,8.75 C11.1005051,8.75 8.75,11.1005051 8.75,14 C8.75,16.8994949 11.1005051,19.25 14,19.25 Z " id="Oval "></path>
+                                              <path d="M19.0640714,18.1103001 C18.7270119,17.8695434 18.6489432,17.4011308 18.8896999,17.0640714 C19.1304566,16.7270119 19.5988692,16.6489432 19.9359286,16.8896999 L23.4359286,19.3896999 C23.7729881,19.6304566
+                                23.8510568,20.0988692 23.6103001,20.4359286 C23.3695434,20.7729881 22.9011308,20.8510568 22.5640714,20.6103001 L19.0640714,18.1103001 Z " id="Line-2 "></path>
+                                          </g>
+                                      </g>
+                                  </g>
+                              </g>
+                          </g>
+                      </g>
+                  </svg>
+                </a>
+            </div>
+            <!-- 导航栏 -->
+            <ul class="meizu-header-link ">
+                <li class="meizu-header-link-product ">
+                    <a href="https://lists.meizu.com/page/list " class="meizu-header-link-product-a " target="_blank ">
+                        手机
+                    </a>
+                </li>
+                <li class="meizu-header-link-product ">
+                    <a href="https://lists.meizu.com/page/list/ " class="meizu-header-link-product-a " target="_blank ">
+                        声学
+                    </a>
+                </li>
+                <li class="meizu-header-link-product ">
+                    <a href="https://lists.meizu.com/page/list " class="meizu-header-link-product-a " target="_blank ">
+                        配件
+                    </a>
+                </li>
+                <li class="meizu-header-link-product ">
+                    <a href="https://lists.meizu.com/page/list/ " class="meizu-header-link-product-a " target="_blank ">
+                        生活
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.flyme.cn/index.html " target="_blank ">Flyme</a>
+                </li>
+                <li>
+                    <a href="http://care.meizu.com/ " target="_blank ">服务</a>
+                </li>
+                <li>
+                    <a href="http://retail.meizu.com/index.html " target="_blank ">专卖店</a>
+                </li>
+                <li>
+                    <a href="https://bbs.meizu.cn/ " target="_blank ">社区</a></li>
+                <li target="_blank " class="meizu-header-link-product ">
+                    <a class="meizu-header-link-product-a " href="javascript:; " target="_blank ">APP下载</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- 手机的二级导航 -->
+        <div id="meizu-header-sub-hd1" class="meizu-header-sub">
+            <div class="meizu-header-sub-wrap ">
+                <ul>
+                    <li>
+                        <a href="https://www.meizu.com/16s/summary/ ">
+                            <i style="background-image: url(../img/Cgbj0Fy9c0KAXyeaAAa7nrDVZiw073.png@240x240.jpg) "></i> 魅族 16s
+                            <span></span>
+                            <em>￥3198</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.meizu.com/note9/summary/ " target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0Vx_ZK6AaEObAAa1DJqn7us376.png@240x240.jpg) "></i> 魅族 Note9
+                            <span></span>
+                            <em>￥1398</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.meizu.com/16/summary/ " target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0FtqgnmAFgJPAAhgnScaoFg724.png@240x240.jpg); "></i> 魅族 16th
+                            <span></span>
+                            <em>￥2298</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.meizu.com/16x/summary/index.html " target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0FvINLWACd0AAAh2dGv5_R0516.png@240x240.jpg) "></i>魅族 16 X
+                            <span></span>
+                            <em>￥1798</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.meizu.com/x8/summary/index.html " target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0FusSK2AQZgiAAlFKHoO-co889.png@240x240.jpg) "></i>魅族 X8
+                            <span></span>
+                            <em>￥1298</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.meizu.com/15/summary/ " target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0FrcblSAGHrPAAvT_qZZSA0427.png@240x240.jpg) "></i>魅族 15
+                            <span></span>
+                            <em>￥1498</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/meizunote8.html " target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0VvQPnuAAwPPAAMv8zzt2DE910.png@240x240.jpg) "></i>魅族 Note8
+                            <span></span>
+                            <em>￥999</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/meizuv8.html " target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0VuhxsmABvIIAAMCZZS4ycg181.png@240x240.jpg) "></i>魅族 V8 高配版
+                            <span></span>
+                            <em>￥898</em>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 声学二级导航 -->
+        <div id="meizu-header-sub-hd2" class="meizu-header-sub">
+            <div class="meizu-header-sub-wrap ">
+                <ul>
+                    <li>
+                        <a href="https://detail.meizu.com/item/meizu_TW50s.html ">
+                            <i style="background-image: url(../img/Cgbj0Vy9Jq6AEzhMAApuih_4TPw329.png@240x240.jpg) "></i>魅族 POP2 真无线蓝牙耳机
+                            <span></span>
+                            <em>￥399</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/meizu_EP63.html " target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0Fy9JYOACw2DAAMWf3vEhbA886.png@240x240.jpg) "></i>魅族 EP63NC 无线降噪耳机
+                            <span></span>
+                            <em>￥499</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/hifiha.html" target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0Vy_C3GAN_TKAAExaPfTwFc180.png@240x240.jpg)"></i> 魅族 HIFI 解码耳放
+                            <span></span>
+                            <em>￥169</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/flowbass.html " target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0FpeqUqAYAbBAAJRQlEIMmc702.png@240x240.jpg) "></i>魅族 Flow Bass 三单元耳机
+                            <span></span>
+                            <em>￥599</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/meizu_ep52_lite.html" target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0Fui_-OAIlOuAAIlimOCLcA452.png@240x240.jpg) "></i>魅族 EP52 Lite 蓝牙耳机
+                            <span></span>
+                            <em>￥129</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/meiuzep71.html " target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0FpeqaKAYLSmAATXqR4BPH8829.png@240x240.jpg) "></i>魅族 LIVE 四单元动铁耳机
+                            <span></span>
+                            <em>￥1099</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/meizu_g20.html" target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0VrcX6yABHxPAARZwWUAjc4748.png@240x240.jpg) "></i>魅族 HALO 激光蓝牙耳机
+                            <span></span>
+                            <em>￥499</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/meilanep52.html " target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0Vn2f8mAcov7AAHUhmjUdk0958.png@240x240.jpg) "></i>魅蓝 EP52 蓝牙耳机
+                            <span></span>
+                            <em>￥199</em>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 配件二级导航 -->
+        <div id="meizu-header-sub-hd3" class="meizu-header-sub">
+            <div class="meizu-header-sub-wrap ">
+                <ul>
+                    <li>
+                        <a href="https://detail.meizu.com/item/meizu16s_pasting.html">
+                            <i style="background-image: url(../img/Cgbj0VzC2w6ASUtDAAMvobH66uY340.jpg@240x240.jpg) "></i>魅族 16s 壳膜套装
+                            <span></span>
+                            <em>￥39</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/meizu_power_bank_3.html" target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0VugrWKAXgQoAALx033SuQ0691.png@240x240.jpg) "></i>魅族移动电源3
+                            <span></span>
+                            <em>￥79</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/wireless_charger.html" target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0VrcXw2AL0tBAApTh_xwKKk709.png@240x240.jpg)"></i>魅族无线充电器
+                            <span></span>
+                            <em>￥99</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/type_c_2.html" target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0FqYqxqAcZ-nAAGaLqkN71s729.png@240x240.jpg) "></i>魅族 Type-C 2.0数据线
+                            <span></span>
+                            <em>￥49</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/micro_usb_cable.html" target="_blank ">
+                            <i style="background-image: url(../img/1458617159-29477.png@240x240.jpg) "></i>魅族 Micro USB 数据线
+                            <span></span>
+                            <em>￥29</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/up0830s.html" target="_blank ">
+                            <i style="background-image: url(../img/1467170145-52479.png@240x240.jpg)"></i>快充电源适配器（UP0830S）
+                            <span></span>
+                            <em>￥69</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/meizu_16_pasting.html" target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0VwkSZKATjTlAAajD8PGNhs208.png@240x240.jpg) "></i>魅族 16th 高透保护膜
+                            <span></span>
+                            <em>￥19</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/meizu_16th_plus_protector.html" target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0Ft7iV6AQANcAAL00J0tbyQ152.png@240x240.jpg) "></i>魅族 16th Plus 亲肤保护壳
+                            <span></span>
+                            <em>￥29</em>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 生活二级导航 -->
+        <div id="meizu-header-sub-hd4" class="meizu-header-sub">
+            <div class="meizu-header-sub-wrap ">
+                <ul>
+                    <li>
+                        <a href="https://detail.meizu.com/item/J_BELT.html">
+                            <i style="background-image: url(../img/Cgbj0Vy_0sOAbdm5AAVQc9fixuE283.jpg@240x240.jpg) "></i>J-BELT
+                            <span></span>
+                            <em>￥999</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/meizu_Citybag.html" target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0Vy9J36ARuB2AAVQph9X9vs749.png@240x240.jpg) "></i>魅族极简都市双肩包
+                            <span></span>
+                            <em>￥179</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/router_f1.html" target="_blank ">
+                            <i style="background-image: url(../img/1465698264-58364.jpg@240x240.jpg)"></i>魅族路由器 极速版
+                            <span></span>
+                            <em>￥99</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/kumamon.html" target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0Vqwv3SAKEs9AAeZO9uMlbg447.png@240x240.jpg) "></i>Everyday 乐游系列 酷 MA 萌定制版
+                            <span></span>
+                            <em>￥599</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/everydaychestpack.html" target="_blank ">
+                            <i style="background-image: url(../img/Cgbj0Vn6yW6AUlsRAAWrjB0SvJc768.png@240x240.jpg) "></i>魅蓝胸包
+                            <span></span>
+                            <em>￥89</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/bluetooth_selfie_stick.html" target="_blank ">
+                            <i style="background-image: url(../img/Cix_s1iW3W2AQAzZAAJUz1tTYF4022.png@240x240.jpg) "></i>魅族蓝牙自拍杆
+                            <span></span>
+                            <em>￥99</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://detail.meizu.com/item/mini_selfie_stick.html" target="_blank ">
+                            <i style="background-image: url(../img/CnQOjVjJ-m2AQ1LxAAE3Ze4d72s837.png@240x240.jpg) "></i>魅族 Mini 线控自拍杆
+                            <span></span>
+                            <em>￥59</em>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- app的二级导航 -->
+        <div class="meizu-header-sub" id="meizu-header-sub-download">
+            <div class="app-down-content">
+                <img src="../img/935524fa-9d0b-420b-a485-105974823f40.jpg" alt="">
+                <a class="app-down-link-2 app-down-link" target="_blank" href="https://hd.meizu.com/share/app_download.html">
+                    <img src="../img/fACDE85H10zLMNOPywSTUVrXnlkbjiu9.png" alt=""></a>
+                <a class="app-down-link-3 app-down-link" target="_blank" href="http://app.flyme.cn/apps/public/detail">
+                    <img src="../img/fACDE85H10zLMNOPywSTUVrXnlkbjiu9.png" alt=""></a>
+            </div>
+        </div>
+        <!-- 二级导航的js -->
+        <script>
+            $(function() {
+                var product = $(".meizu-header-link-product");
+                var time = null,
+                    time1 = null,
+                    time2 = null,
+                    time3 = null,
+                    time4 = null;
+                product.on('mouseover', function() {
+                    $('#head').css('background-color', '#fff');
+                });
+                product.on('mouseout', function() {
+                    $('#head').css('background-color', 'rgba(255, 255, 255, 0)');
+                });
+                // 手机的二级导航js
+                product[0].onmouseover = function() {
+                    clearTimeout(time);
+                    $('#meizu-header-sub-hd1').show(800);
+                };
+                product[0].onmouseout = function() {
+                    time = setTimeout(function() {
+                        $('#meizu-header-sub-hd1').hide();
+                    }, 0);
+                }
+                $('#meizu-header-sub-hd1').hover(function() {
+                    clearTimeout(time);
+                    $('#head').css('background-color', '#fff');
+                }, function() {
+                    time = setTimeout(function() {
+                        $('#meizu-header-sub-hd1').hide();
+                        $('#head').css('background-color', 'rgba(255, 255, 255, 0)');
+                    }, 0)
+                });
+
+                // 声学的二级导航js
+                product[1].onmouseover = function() {
+                    clearTimeout(time1);
+                    $('#meizu-header-sub-hd2').show(800);
+
+                };
+                product[1].onmouseout = function() {
+                    time1 = setTimeout(function() {
+                        $('#meizu-header-sub-hd2').hide();
+                    }, 0);
+                }
+                $('#meizu-header-sub-hd2').hover(function() {
+                    $('#head').css('background-color', '#fff');
+                    clearTimeout(time1);
+                }, function() {
+                    time1 = setTimeout(function() {
+                        $('#meizu-header-sub-hd2').hide();
+                        $('#head').css('background-color', 'rgba(255, 255, 255, 0)');
+                    }, 0)
+                });
+
+                // 配件的二级导航js
+                product[2].onmouseover = function() {
+                    clearTimeout(time2);
+                    $('#meizu-header-sub-hd3').show(800);
+                };
+                product[2].onmouseout = function() {
+                    time2 = setTimeout(function() {
+                        $('#meizu-header-sub-hd3').hide();
+                    }, 60);
+                }
+                $('#meizu-header-sub-hd3').hover(function() {
+                    $('#head').css('background-color', '#fff');
+                    clearTimeout(time2);
+                }, function() {
+                    time2 = setTimeout(function() {
+                        $('#meizu-header-sub-hd3').hide();
+                        $('#head').css('background-color', 'rgba(255, 255, 255, 0)');
+                    }, 60)
+                });
+
+
+                // 生活的二级导航js
+                product[3].onmouseover = function() {
+                    clearTimeout(time3);
+                    $('#meizu-header-sub-hd4').show(800);
+                };
+                product[3].onmouseout = function() {
+                    time3 = setTimeout(function() {
+                        $('#meizu-header-sub-hd4').hide();
+                    }, 60);
+                }
+                $('#meizu-header-sub-hd4').hover(function() {
+                    $('#head').css('background-color', '#fff');
+                    clearTimeout(time3);
+                }, function() {
+                    time3 = setTimeout(function() {
+                        $('#meizu-header-sub-hd4').hide();
+                        $('#head').css('background-color', 'rgba(255, 255, 255, 0)');
+                    }, 60)
+                });
+
+
+                //app的二级导航
+                product[4].onmouseover = function() {
+                    clearTimeout(time4);
+                    $('#meizu-header-sub-download').show(800);
+                };
+                product[4].onmouseout = function() {
+                    time4 = setTimeout(function() {
+                        $('#meizu-header-sub-download').hide();
+                    }, 60);
+                }
+                $('#meizu-header-sub-download').hover(function() {
+                    $('#head').css('background-color', '#fff');
+                    clearTimeout(time4);
+                }, function() {
+                    time4 = setTimeout(function() {
+                        $('#meizu-header-sub-download').hide();
+                        $('#head').css('background-color', 'rgba(255, 255, 255, 0)');
+                    }, 60)
+                });
+
+            })
+        </script>
+        <!-- 二级导航的js结束 -->
+    </div>
+    <!-- 头部结束 -->
+
+    <!-- main -->
+    <div class="con-main">
+        <div class="con-tu">
+            <img src="../img/1a65e11f-29d2-447d-b3c2-c833137b7fbb.webp" alt="">
+            <div class="address-box">
+                <div class="address">
+                    <h5 class="address-title">联系方式</h5>
+                    <p class="address-detail">公司：珠海市魅族科技有限公司</p>
+                    <p class="address-detail is-last">地址：广东省珠海市唐家湾科技创新海岸魅族科技楼</p>
+                    <p class="address-info">Meizu Technology Co., Ltd</p>
+                    <p class="address-info">MEIZU Tech Bldg., Technology &amp; Innovation Coast</p>
+                    <p class="address-info">Zhuhai, 519085, Guangdong, China.</p>
+                </div>
+            </div>
+        </div>
+        <section class="con-nav">
+            <ul class="con-tabs clearfix">
+                <li class="con-tabs__item">
+                    <a class="con-tabs__link" href="#know">了解魅族</a>
+                </li>
+                <li class="con-tabs__item">
+                    <a class="con-tabs__link" href="#history">发展经历</a>
+                </li>
+                <li class="con-tabs__item">
+                    <a class="con-tabs__link" href="#product">产品列表</a>
+                </li>
+                <li class="con-tabs__item">
+                    <a class="con-tabs__link" href="#contact">联系我们</a>
+                </li>
+                <li class="con-tabs__item">
+                    <a class="con-tabs__link" href="http://hr.meizu.com" target="_blank">加入我们</a>
+                </li>
+            </ul>
+            <section class="con-tact">
+                <div>
+                    <h3 class="contact-title">客户服务</h3>
+                    <div class="contact-item">
+                        <div class="contact-item__left">
+                            <h4 class="contact-sub-title">客服</h4>
+                            <p class="contact-item__detail">热线：<a href="tel:+491570156">400-788-3333</a>（周一至周日 7:30-24:00）</p>
+                            <a class="contact-item__button" href="http://url.meizu.com/ols_PC" target="_blank">在线客服</a>
+                        </div>
+                        <div class="contact-item__right">
+                            <h4 class="contact-sub-title">售后</h4>
+                            <p class="contact-item__detail">联系人：赵胜 电话：<a href="tel:+0756-6120138">0756-6120138</a></p>
+                            <p class="contact-item__detail">地址：珠海市唐家湾高新区留诗路 2 号厂房 1 楼 </p>
+                            <p class="contact-item__detail">邮编：519085</p>
+                        </div>
+                    </div>
+                    <h3 class="contact-title">媒体垂询/公关传播</h3>
+                    <div class="contact-item">
+                        <p class="contact-item__detail">Email：<a class="contact-item__email" href="mailto:PR@meizu.com">PR@meizu.com</a></p>
+                    </div>
+                    <h3 class="contact-title">业务合作</h3>
+                    <div class="contact-item">
+                        <div class="contact-item__left">
+                            <h4 class="contact-sub-title">市场推广/品牌合作</h4>
+                            <p class="contact-item__detail">Email：<a class="contact-item__email" href="mailto:mz-marketing@meizu.com">mz-marketing@meizu.com</a></p>
+                            <h4 class="contact-sub-title">认证店加盟</h4>
+                            <p class="contact-item__detail clearfix">
+                                <span class="left">电话：</span>
+                                <span class="right">
+                                        <a href="tel:+0756-6121652">0756-6121652</a>（周一到周五 9:00-12:00 / 13:30-18:00，周末及节假日除外）
+                                      </span>
+                            </p>
+                            <h4 class="contact-sub-title business">国际业务</h4>
+                            <p class="contact-item__detail">公司：远思科技企业有限公司</p>
+                            <p class="contact-item__detail">地址：香港九龙旺角弥敦道 610 号荷李活商业中心 19 楼 01-02室</p>
+                            <p class="contact-item__detail">电话：<a href="tel:+00852-23888022">00852-2388 8022、</a><a href="tel:+00852-23880006">00852-2388 0006、</a><a href="tel:+00852-23882033">00852-2388 2033</a></p>
+                            <p class="contact-item__detail">传真：<a href="tel:+00852-23323339">00852-2332 3339</a></p>
+                            <p class="contact-item__detail">Email：<a class="contact-item__email" href="mailto:sales@meizu.com.hk">sales@meizu.com.hk</a></p>
+                        </div>
+                        <div class="contact-item__right services">
+                            <h4 class="contact-sub-title">经销商服务</h4>
+                            <p class="contact-item__detail">Email：<a class="contact-item__email" href="mailto:business@meizu.com">business@meizu.com</a></p>
+                            <h4 class="contact-sub-title">B2C 电子商务渠道</h4>
+                            <p class="contact-item__detail">Email：<a class="contact-item__email" href="mailto:e-business@meizu.com">e-business@meizu.com</a></p>
+                            <h4 class="contact-sub-title">产品与技术相关战略合作</h4>
+                            <p class="contact-item__detail">Email：<a class="contact-item__email" href="mailto:cooperation@meizu.com">cooperation@meizu.com</a></p>
+                            <h4 class="contact-sub-title">魅族应用商店第三方开发者合作</h4>
+                            <p class="contact-item__detail">Email：<a class="contact-item__email" href="mailto:dev@meizu.com">dev@meizu.com</a></p>
+                        </div>
+                    </div>
+                    <h3 class="contact-title">加入魅族</h3>
+                    <div class="contact-item">
+                        <p class="contact-item__detail">Email：<a class="contact-item__email" href="mailto:zhaopin@meizu.com">zhaopin@meizu.com</a></p>
+                    </div>
+                    <h3 class="contact-title">知识产权事务建议/举报/投诉</h3>
+                    <div class="contact-item">
+                        <p class="contact-item__detail">Email：<a class="contact-item__email" href="mailto:IPR@meizu.com">IPR@meizu.com</a></p>
+                    </div>
+                    <h3 class="contact-title">反商业贿赂</h3>
+                    <div class="contact-item is-single">
+                        <p class="contact-item__detail">魅族严禁员工向业务合作伙伴索贿或收取佣金、回扣或其他私人利益。对有具体线索的举报，魅族内控合规部门将开展独立调查并为举报人保密。</p>
+                        <p class="contact-item__detail">举报邮箱：<a class="contact-item__email" href="mailto:lianzheng@meizu.com">lianzheng@meizu.com</a></p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+
+    <!-- main结束 -->
+
+
+    <!-- footer -->
+    <div id="footer" class="footer">
+        <div class="footer-mid">
+            <div class="footer-wrap">
+                <div class="meizu-row">
+                    <ul class="footer-service">
+                        <li>
+                            <a href="http://service.meizu.com/help/delivery.html" target="_blank">
+                                <img src="../img/f-1.png">
+                                <span>满80免运费</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://store.meizu.com/marrive/summary.html" target="_blank">
+                                <img src="../img/f-2.png">
+                                <span>100+ 城市次日送达</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://service.meizu.com/help/after_ser.html" target="_blank">
+                                <img src="../img/f-3.png">
+                                <span>7天无理由退货</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://service.meizu.com/help/after_ser.html" target="_blank">
+                                <img src="../img/f-4.png">
+                                <span>15天换货保障</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://service.meizu.com/help/after_ser.html" target="_blank">
+                                <img src="../img/f-5.png">
+                                <span>1年免费保修</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://service.meizu.com/repair/home/profile.html" target="_blank">
+                                <img src="../img/f-6.png">
+                                <span>上门快修</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="onlive-server">
+                        <span>周一至周日 7:30-24:00</span>
+                        <p class="tel">400-788-3333</p>
+                        <a class="onlive-btn" href="http://url.meizu.com/ols_PC" target="_blank">在线客服</a>
+                    </div>
+                </div>
+                <hr class="footer-hr">
+                <div class="footer-co">
+                    <div class="meizu-row">
+                        <div class="footer-info">
+                            <div class="footer-info-left">
+                                <ul class="clearfix" id="footer-links">
+                                    <li>
+                                        <a href="https://www.meizu.com/about.html" target="_blank">了解魅族</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://hr.meizu.com/" target="_blank">加入我们</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.meizu.com/about.html" target="_blank">联系我们</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.flyme.cn/index.html" target="_blank">Flyme</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://bbs.meizu.cn/" target="_blank">魅族社区</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://meizu.tmall.com/" target="_blank">天猫旗舰店</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.meizu.com/feedback.html" target="_blank">问题反馈</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.meizu.com/authorization.html" target="_blank">线上销售授权名单公示</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://cimg2.res.meizu.com/www/meizu/publish_license.pdf" target="_blank">出版物经营许可证</a>
+                                    </li>
+                                    <li class="no-border meizu-footer-langList" id="meizu-footer-langList">
+                                        <span id="meizu-footer-language" class="meizu-footer-language">                     
+                                                <a class="button-language" href="javascript:void(0);">               
+                                                <i class="icon-lang-logo icon-lang-logo-cn"></i>
+                                                简体中文    
+                                                </a>                        
+                                            </span>
+                                        <div class="modal-lang-body" id="modal-lang-body-footer">
+                                            <ul id="lang_list_" class="lang_list_">
+                                                <li class="footerLi">
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo.png);background-position: 0 0;" class="lang-logo lang-logo-index.html"></i>
+                                                        <span>简体中文</span>
+                                                    </a>
+                                                </li>
+                                                <li class="footerLi">
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo1.png);background-position: 0 0;" class="lang-logo lang-logo-hk/"></i>
+                                                        <span>繁體中文</span>
+                                                    </a>
+                                                </li>
+                                                <li class="footerLi">
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo2.png);background-position: 0 0;" class="lang-logo lang-logo-en/"></i>
+                                                        <span>English</span>
+                                                    </a>
+                                                </li>
+                                                <li class="footerLi">
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo3.png);background-position: 0 0;" class="lang-logo lang-logo-ru"></i>
+                                                        <span>Русский</span>
+                                                    </a>
+                                                </li>
+                                                <li class="footerLi">
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo4.png);background-position: 0 0;" class="lang-logo lang-logo-ua"></i>
+                                                        <span>Україна</span>
+                                                    </a>
+                                                </li>
+                                                <li class="footerLi">
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo5.png);background-position: 0 0;" class="lang-logo lang-logo-tr"></i>
+                                                        <span>Türkiye</span>
+                                                    </a>
+                                                </li>
+                                                <li class="footerLi">
+                                                    <a href="javascript:;">
+                                                        <i style="background-image:url(../img/guo6.png);background-position: 0 0;" class="lang-logo lang-logo-in"></i>
+                                                        <span>India</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="meizu-footer-language-wp clearfix"></div>
+                                <div class="footer-certificate">
+                                    ©2019 Meizu Telecom Equipment Co., Ltd. All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a target="_blank" href="http://www.miitbeian.gov.cn/" hidefocus="true">粤ICP备13003602号</a>
+                                    <a target="_blank" href="//www3.res.meizu.com/static/cn/_partial/footer/images/icp2_fb8db74.jpg" hidefocus="true">合字B2-20170010 </a>
+                                    <a target="_blank" href="//www3.res.meizu.com/static/cn/_partial/footer/images/com_licence_b00fe42.jpg" hidefocus="true">营业执照</a>
+                                    <a target="_blank" href="https://www.meizu.com/legal.html" hidefocus="true">法律声明</a>
+                                    <span class="footer-info-record" target="_blank" href="">
+                                            <i></i>
+                                            粤公网安备 44049102496009 号
+                                        </span>
+                                    <a class="footer-info-license" target="_blank" rel="nofollow" href="http://210.76.65.188/" hidefocus="true">
+                                        <i></i>
+                                    </a>
+                                    <a class="footer-info-wel" target="_blank" rel="nofollow" href="http://210.76.65.188/webrecord/innernet/Welcome.jsp" hidefocus="true">
+                                        <i></i>
+                                    </a>
+                                    <a class="footer-info-trust" target="_blank" rel="nofollow" href="https://credit.szfw.org/CX20151204012550820380.html" hidefocus="true">
+                                        <i></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="ii-subscribe" class="wbtubiao">
+                                <a href="javascript:;" target="_blank">
+                                    <img src="../img/small.png" alt="" style="display: none;">
+                                    <i class="ii-subscribe-img " style="background-size:96%;background-image:url(../img/3b085af8-a47b-453c-b147-a4b352fb3a14.png)"></i>
+                                </a>
+                                <span class="ii-hr"></span>
+                                <a href="javascript:;" target="_blank">
+                                    <img src="../img/small1.jpg" alt="" style="display: none;">
+                                    <i class="ii-subscribe-img " style="background-size: 96%; background-image: url(../img/58e3e041-5543-4414-aaf1-d8e1fd539af6.png);"></i>
+                                </a>
+                                <span class="ii-hr"></span>
+                                <a href="https://user.qzone.qq.com/2762957059" target="_blank">
+                                    <i class="ii-subscribe-img " style="background-size: 96%; background-image: url(../img/52cba4a4-b3a6-4522-9883-d3a918e7d4a9.png);"></i>
+                                </a>
+                                <span class="ii-hr"></span>
+                                <a href="https://weibo.com/meizumobile" target="_blank">
+                                    <i class="ii-subscribe-img " style="background-size: 96%; background-image: url(../img/bcccf9d2-e0e5-441b-b4a3-f78c12bc3933.png);"> </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.wbtubiao>a:nth-of-type(1)').hover(function() {
+                $(this).children('i').css('background-image', 'url(../img/6721704b-7b6d-445d-a025-e33649e5db74.png)');
+                $(this).children('img').css('display', 'block');
+            },
+            function() {
+                $(this).children('i').css('background-image', 'url(../img/3b085af8-a47b-453c-b147-a4b352fb3a14.png)');
+                $(this).children('img').css('display', 'none');
+            });
+        $('.wbtubiao>a:nth-of-type(2)').hover(function() {
+                $(this).children('i').css('background-image', 'url(../img/cb0d00dc-41f7-4339-a0b3-25ee7dca1d4a.png)');
+                $(this).children('img').css('display', 'block');
+            },
+            function() {
+                $(this).children('i').css('background-image', 'url(../img/58e3e041-5543-4414-aaf1-d8e1fd539af6.png)');
+                $(this).children('img').css('display', 'none');
+            })
+        $('.wbtubiao>a:nth-of-type(3)').hover(function() {
+                $(this).children('i').css('background-image', 'url(../img/aff10988-6493-49c0-961a-0c91eae603b4.png)');
+            },
+            function() {
+                $(this).children('i').css('background-image', 'url(../img/52cba4a4-b3a6-4522-9883-d3a918e7d4a9.png)');
+            })
+        $('.wbtubiao>a:nth-of-type(4)').hover(function() {
+                $(this).children('i').css('background-image', 'url(../img/7df8d821-a5c4-4619-9981-04e31db6e3de.png)');
+            },
+            function() {
+                $(this).children('i').css('background-image', 'url(../img/bcccf9d2-e0e5-441b-b4a3-f78c12bc3933.png)');
+            })
+    </script>
+    <!-- footer结束 -->
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js "></script>
+</body>
+
+</html>
