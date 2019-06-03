@@ -8,7 +8,6 @@ body {
     min-width: 1240px;
     min-height: 100%;
     box-sizing: border-box;
-    padding-bottom: 246px;
 }
 
 html {
@@ -399,7 +398,7 @@ table {
     height: 70px;
     font-size: 14px;
     color: #666;
-    background-color: #fff;
+    // background-color: #fff;
     line-height: 67px;
     transition: background-color 1s;
     .mzcontainer {

@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/shopping cart.min.css">
     <link rel="stylesheet" href="../css/footer.min.css">
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/shopping cart.js"></script>
+
 </head>
 
 <body>
@@ -16,8 +20,8 @@
     <div class="shopping-header clearfix">
         <div class="mzcontainer">
             <div class="layout-header-logo">
-                <a target="_blank" href="http://www.meizu.com" class="layout-header-logo-link" alt="魅族科技">
-                    <img src="../img/logo.png" style="max-width:125px;margin-top:  28px;">
+                <a target="_blank" href="index.html" class="layout-header-logo-link" alt="魅族科技">
+                    <img src="../img/logo.png" style="max-width:125px;margin-top:28px;">
                 </a>
             </div>
             <ul class="layout-header-bread">
@@ -28,13 +32,13 @@
             </ul>
             <ul class="layout-header-right">
                 <li class="layout-header-right-item">
-                    <a class="layout-header-right-link" href="//ordercenter.meizu.com/list/index.html" target="_blank">我的订单</a>
+                    <a class="layout-header-right-link" href="index.html" target="_blank">我的订单</a>
                 </li>
                 <li class="layout-header-right-item signout">
-                    <a class="layout-header-right-link" href="javascript:window.location.href='https://login.flyme.cn/vCodeLogin">登录</a>
+                    <a class="layout-header-right-link" href="javascript:window.location.href='login.html'">登录</a>
                 </li>
                 <li class="layout-header-right-item signout">
-                    <a class="layout-header-right-link" target="_blank" href="//member.meizu.com/register">注册</a>
+                    <a class="layout-header-right-link" target="_blank" href="register.html">注册</a>
                 </li>
             </ul>
         </div>
@@ -43,14 +47,19 @@
 
     <!-- main -->
     <div class="cart">
-        <div class="cart-login-tips show" id="cartLoginTips">
+        <div class="cart-login-tips show sh-close" id="cartLoginTips">
             <i class="cart-login-tips-icon"></i> 您还没有登录！登录后可显示您账号中已加入的商品哦~
-            <a class="mz-btn" href="javascript:void(0);">
+            <a class="mz-btn" href="login.html">
                 去登录
               </a>
             <div class="close-tips" id="closeTips"></div>
         </div>
-
+        <script>
+            var close = $('#closeTips');
+            close.on('click', function() {
+                $('.sh-close').css('display', 'none');
+            });
+        </script>
         <div class="mzcontainer">
             <table class="cart-header">
                 <tbody>
@@ -69,7 +78,7 @@
                 </tbody>
             </table>
             <ul class="cart-merchant-list" id="merchantList">
-                <li class="cart-merchant">
+                <!-- <li class="cart-merchant">
                     <table class="cart-merchant-body">
                         <tr class="cart-more-buy">
                             <td class="cart-product-buy" colspan="5">
@@ -103,7 +112,7 @@
                                     <div class="mz-adder ">
                                         <button class="mz-adder-subtract disabled">-</button>
                                         <div class="mz-adder-num">
-                                            <input type="text " class="mz-adder-input" value="1 ">
+                                            <input type="text " class="mz-adder-input" value="1" style="height: 13px;">
                                         </div>
                                         <button class="mz-adder-add">+</button>
                                     </div>
@@ -119,12 +128,12 @@
                             </td>
                         </tr>
                     </table>
-                </li>
+                </li> -->
             </ul>
         </div>
 
         <div class="cart-footer " id="cartFooter ">
-            <div class="mzcontainer ">
+            <div class="mzcontainer" style="background-color:white;overflow: hidden;">
                 <div class="cart-footer-left ">
                     <div class="cart-select-all">
                         <input type="checkbox" name="checkall" id="checkall">
@@ -139,7 +148,7 @@
                 <div class="cart-footer-right">
                     <span class="cart-footer-sum">
                     已优惠<span class="cart-footer-num red">0.00</span>元， 合计(不含运费)：
-                    <span class="cart-footer-total"><i>￥</i>2298.00</span>
+                    <i>￥</i><span class="cart-footer-total" id="zojia">0.00</span>
                     </span>
                     <div class="mz-btn success to-order-btn">
                         去结算
@@ -212,7 +221,7 @@
                                         <a href="http://hr.meizu.com/" target="_blank">加入我们</a>
                                     </li>
                                     <li>
-                                        <a href="https://www.meizu.com/about.html" target="_blank">联系我们</a>
+                                        <a href="contact.html" target="_blank">联系我们</a>
                                     </li>
                                     <li>
                                         <a href="https://www.flyme.cn/index.html" target="_blank">Flyme</a>
@@ -365,6 +374,7 @@
             })
     </script>
     <!-- footer结束 -->
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js "></script>
 </body>
 
 </html>

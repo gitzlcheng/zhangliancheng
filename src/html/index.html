@@ -33,7 +33,7 @@
         <div class="head-center">
             <!-- logo -->
             <div class="meizu-header-logo">
-                <a href="https://www.meizu.com/index.html" class="meizu-header-logo-img">
+                <a href="index.html" class="meizu-header-logo-img">
                     <svg fill="#00b4ff" version="1.1" id="Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="402.048px" height="73.556px" viewBox="17.318 5.824 402.048 73.556" enable-background="new 17.318 5.824 402.048 73.556"
                         xml:space="preserve">
                   <path d="M321.513,5.824H256.91v12.878h51.478l-49.294,44.581c-8.227,7.023-2.872,16.096,3.958,16.096h65.337V66.472
@@ -51,7 +51,7 @@
                 </a>
             </div>
             <!-- 购物车 -->
-            <a class="meizu-header-cart" href="https://cart.meizu.com/" target="_blank">
+            <a class="meizu-header-cart" href="shopping cart.html" target="_blank">
                 <em>0</em>
             </a>
             <!-- 登录图标 -->
@@ -66,10 +66,10 @@
                         <!-- 这个是bootstrap的图标三角形 -->
                         <div class="glyphicon glyphicon-triangle-top xiaosj"> </div>
                         <li>
-                            <a href="https://login.flyme.cn/vCodeLogin " target="_blank ">立即登录</a>
+                            <a href="login.html" target="_blank ">立即登录</a>
                         </li>
                         <li>
-                            <a href="https://i.flyme.cn/register " target="_blank ">立即注册</a></li>
+                            <a href="register.html" target="_blank ">立即注册</a></li>
 
                         <li>
                             <a href="http://ordercenter.meizu.com/list/index.html " target="_blank ">我的订单</a>
@@ -615,7 +615,7 @@
                 </div>
                 <div class="section-box-row">
                     <div class="index-center-wrapper">
-                        <ul class="clearfix">
+                        <ul class="clearfix data-render">
                             <li class="big big1">
                                 <div class="section-item-box goods-box">
                                     <a class="box-img box-img-retina" href="https://detail.meizu.com/item/meizu16xs.html" target="_blank">
@@ -642,7 +642,7 @@
                                     </a>
                                 </div>
                             </li>
-                            <li class="Phone3">
+                            <!-- <li class="Phone3">
                                 <div class="section-item-box goods-box">
                                     <a class="box-img box-img-retina" href="https://detail.meizu.com/item/meizunote9.html" target="_blank">
                                         <img class="goods-img lazy" data-original="../img/Cgbj0Vx_ZK6AaEObAAa1DJqn7us376.png">
@@ -745,12 +745,54 @@
                                         <span class="product-sign blue">领券</span>
                                     </a>
                                 </div>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- 数据渲染js -->
+        <script>
+            $(function() {
+                $.ajax({
+                    type: "get",
+                    url: "../php/getproduct.php",
+                    dataType: "json",
+                    success: function(response) {
+                        console.log(response);
+                        var data = $('.data-render');
+                        var add_data = '';
+                        response.forEach(function(elm, i) {
+                            var pic = JSON.parse(elm.pic);
+                            add_data = `
+                        <li class="Phone${i+3}">
+                                <div class="section-item-box goods-box">
+                                    <a class="box-img box-img-retina" href="details.html?id=${elm.id}" target="_blank">
+                                        <img class="goods-img lazy" data-original="${pic.big}">
+                                        <span class="box-info">
+                                            <span class="goods-name">${elm.title}</span>
+                                        <span class="goods-desc">${elm.details}</span>
+                                        <span class="goods-price"> <i>￥</i>${elm.price}<em></em> </span>
+                                        </span>
+                                        <span class="product-sign blue">领券</span>
+                                    </a>
+                                </div>
+                            </li>
+                        `;
+                            data.append(add_data);
+                            $("img.lazy").lazyload({
+                                placeholder: "../img/loading.gif",
+                                effect: "fadeIn"
+                            });
+                        });
+                    }
+                });
+
+            })
+        </script>
+        <!-- 数据渲染js结束 -->
+
         <!-- 魅族手机结束 -->
 
         <!-- 魅族声学 -->
@@ -1425,7 +1467,7 @@
                                         <a href="http://hr.meizu.com/" target="_blank">加入我们</a>
                                     </li>
                                     <li>
-                                        <a href="https://www.meizu.com/about.html" target="_blank">联系我们</a>
+                                        <a href="contact.html" target="_blank">联系我们</a>
                                     </li>
                                     <li>
                                         <a href="https://www.flyme.cn/index.html" target="_blank">Flyme</a>
