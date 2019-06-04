@@ -1,7 +1,7 @@
 <?php
     include('./conn.php');
-    $username = $_REQUEST['phone'];
-    $password = $_REQUEST['password'];
+    $username = $_POST['phone'];
+    $password = $_POST['password'];
 
     $sql = "select * from user where user_name='$username' and user_pwd='$password'";
     

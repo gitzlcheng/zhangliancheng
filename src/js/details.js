@@ -1,16 +1,18 @@
 $(function() {
     var shop = cookie.get('shop');
-    var carnum = 0;
-    shop = JSON.parse(shop);
-    var arr2 = shop.map(function(elm, i) {
-        return elm.num;
-    });
-    for (var i = 0; i < arr2.length; i++) {
-        carnum += arr2[i] * 1;
-    }
-    console.log(arr2);
-    $('.shnum').html(carnum);
+    if (shop) {
 
+        var carnum = 0;
+        shop = JSON.parse(shop);
+        var arr2 = shop.map(function(elm, i) {
+            return elm.num;
+        });
+        for (var i = 0; i < arr2.length; i++) {
+            carnum += arr2[i] * 1;
+        }
+        console.log(arr2);
+        $('.shnum').html(carnum);
+    }
     var id = location.search.split('=')[1];
     $.ajax({
         type: "get",
@@ -21,7 +23,7 @@ $(function() {
         dataType: "json",
         success: function(response) {
             var pic = JSON.parse(response.pic);
-            // console.log(pic);
+            console.log(pic);
             var add_data = `
             <div class="main">
                 <div class="main-nav">

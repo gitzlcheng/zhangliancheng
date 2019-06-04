@@ -31,11 +31,14 @@ $(function() {
                 },
                 // dataType: "json",
                 success: function(response) {
-                    if (response) {
+                    if (response == 'true') {
                         alert('注册成功,点击跳转!');
                         location.href = 'login.html';
+                    } else if (response == "用户名已存在") {
+                        alert('用户名已存在');
+                        location.href = 'login.html';
                     } else {
-                        alert('注册失败');
+                        alert('注册失败,点击跳转!');
                         location.href = 'register.html';
                     }
                 }

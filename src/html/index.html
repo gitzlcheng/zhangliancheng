@@ -24,19 +24,20 @@
                 placeholder: "../img/loading.gif",
                 effect: "fadeIn"
             });
-
             var shop = cookie.get('shop');
-            var carnum = 0;
-            shop = JSON.parse(shop);
-            var arr2 = shop.map(function(elm, i) {
-                return elm.num;
-            });
-            for (var i = 0; i < arr2.length; i++) {
-                carnum += arr2[i] * 1;
-            }
-            console.log(arr2);
-            $('.shnum').html(carnum);
+            if (shop) {
 
+                var carnum = 0;
+                shop = JSON.parse(shop);
+                var arr2 = shop.map(function(elm, i) {
+                    return elm.num;
+                });
+                for (var i = 0; i < arr2.length; i++) {
+                    carnum += arr2[i] * 1;
+                }
+                console.log(arr2);
+                $('.shnum').html(carnum);
+            }
         })
     </script>
 </head>
@@ -98,11 +99,11 @@
                             <a href="https://member.meizu.com/uc/webjsp/member/detail?click=store_index_dh_mycenter_user&amp;click=click_store_index_dh_mycenter_user " target="_blank " data-mtype="store_index_dh_mycenter_user " data-bh="click_store_index_dh_mycenter_user ">个人中心</a>
                         </li>
                         <li>
-                          <a href="http://ordercenter.meizu.com/list/index.html?click=store_index_dh_mycenter_order_1&amp;click=click_store_index_dh_mycenter_order_1 " target="_blank " data-mtype="store_index_dh_mycenter_order_1 " data-bh="click_store_index_dh_mycenter_order_1 ">我的订单</a>
+                          <a href="http://ordercenter.meizu.com/list/index.html?click=store_index_dh_mycenter_order_1&amp;click=click_store_index_dh_mycenter_order_1 " target="_blank ">我的订单</a>
                         </li>
                         <li><a href="http://mformy.meizu.com/?click=store_index_dh_mycenter_mcode_1&amp;click=click_store_index_dh_mycenter_mcode_1 " target="_blank " data-mtype="store_index_dh_mycenter_mcode_1 " data-bh="click_store_index_dh_mycenter_mcode_1 ">M码通道</a></li>
                         <li>
-                            <a href="https://www.meizu.com/#?click=store_index_dh_mycenter_out&amp;click=click_store_index_dh_mycenter_out " id="meizu-header-user-logout " data-mtype="store_index_dh_mycenter_out " class=" " data-bh="click_store_index_dh_mycenter_out ">退出登录</a>
+                            <a href="https://www.meizu.com/#?click=store_index_dh_mycenter_out&amp;click=click_store_index_dh_mycenter_out " id="meizu-header-user-logout ">退出登录</a>
                         </li>
                     </ul>
                 </div> -->

@@ -10,6 +10,11 @@
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="../js/login.js"></script>
+    <style>
+        label.error {
+            color: #387aff;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,7 +31,7 @@
                         <a class="title-a" href="javascript:void(0)">用户登录</a>
                     </div>
                     <div class="main-phone">
-                        <input id="phone" name="phone" class="phone-num" maxlength="11" placeholder="手机号码/用户名">
+                        <input id="phone" name="phone" class="phone-num" maxlength="16" placeholder="手机号码/用户名">
                     </div>
                     <div class="main-pwd">
                         <input id="password" name="password" class="phone-pwd" type="password" placeholder="请输入密码">
