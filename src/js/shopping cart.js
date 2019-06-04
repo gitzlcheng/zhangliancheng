@@ -1,25 +1,25 @@
 $(function() {
-        var shop = cookie.get('shop');
+    var shop = cookie.get('shop');
+    // console.log(shop);
+    if (shop) {
+        shop = JSON.parse(shop);
         // console.log(shop);
-        if (shop) {
-            shop = JSON.parse(shop);
-            // console.log(shop);
-            var idData = shop.map(elm => elm.id).join();
-            $.ajax({
-                type: "get",
-                url: "../php/shop.php",
-                data: {
-                    "idData": idData
-                },
-                dataType: "json",
-                success: function(response) {
-                    var data = '';
-                    response.forEach(function(elm) {
-                        var pic = JSON.parse(elm.pic);
-                        var arr = shop.filter((val, i) => {
-                            return val.id === elm.id;
-                        });
-                        data = `
+        var idData = shop.map(elm => elm.id).join();
+        $.ajax({
+            type: "get",
+            url: "../php/shop.php",
+            data: {
+                "idData": idData
+            },
+            dataType: "json",
+            success: function(response) {
+                var data = '';
+                response.forEach(function(elm) {
+                    var pic = JSON.parse(elm.pic);
+                    var arr = shop.filter((val, i) => {
+                        return val.id === elm.id;
+                    });
+                    data = `
                     <li class="cart-merchant">
                         <table class="cart-merchant-body">
                             <tr class="cart-more-buy">
@@ -72,51 +72,86 @@ $(function() {
                         </table>
                     </li>
                     `;
-                        $('#merchantList').append(data);
-                        $('.cart-product-remove').on('click', function() {
-                            var id = $('#cart_shop').attr("data_id");
-                            var caremove = $(this).parent().parent().parent('.cart-merchant');
-                            caremove.css('display', 'none');
-                            var arr1 = shop.filter((val, i) => {
-                                return val.id != elm.id;
-                            });
-                            // console.log(arr1);
-                            arr1 = JSON.stringify(arr1);
-                            cookie.set('shop', arr1, 1);
-                            location.reload();
+                    $('#merchantList').append(data);
+                    $('.cart-product-remove').on('click', function() {
+                        var id = $('#cart_shop').attr("data_id");
+                        var caremove = $(this).parent().parent().parent('.cart-merchant');
+                        caremove.css('display', 'none');
+                        var arr1 = shop.filter((val, i) => {
+                            return val.id != elm.id;
                         });
-
+                        // console.log(arr1);
+                        arr1 = JSON.stringify(arr1);
+                        cookie.set('shop', arr1, 1);
+                        location.reload();
                     });
-                }
-            });
-        }
-        var ulshop = $('#merchantList');
-        ulshop.on('change', function(ev) {
-            ev = ev || event;
-            target = event.target || event.srcElement;
-            var node = target.parentNode.parentNode.parentNode.parentNode.nextElementSibling;
-            var nodep = target.parentNode.parentNode.parentNode.parentNode.previousElementSibling;
-            var chanum = $(target).val() * $(nodep).find('.cart-product-price').html();
-            // console.log(chanum);
-            $(node).find('.priceadd').html(chanum);
-        });
-        var zojia = $('#zojia');
-        zojia.innerHTML = '';
-        ulshop.on('click', function(ev) {
-            ev = ev || event;
-            target = event.target || event.srcElement;
-            console.log(target.nodeName);
-            if (target.nodeName == 'INPUT') {
-                var valshop = $(target).parent().parent().find('.priceadd');
-                zojia.innerHTML += valshop.html();
-                // zojie.html(function(old) {
-                //     return old + valshop.html();
-                // });
-                console.log(zojia);
+
+                    $("#checkall").on('click', function() {
+                        // console.log(5);
+                        console.log($("input[type='checkbox']:not(:last)"));
+                        if ($(this).prop('checked')) {
+                            $("input[type='checkbox']:not(:first)").prop('checked', true);
+                            $("input[type='checkbox']:not(:last)").prop('checked', true);
+                        } else {
+                            $("input[type='checkbox']:not(:first)").prop('checked', false);
+                            $("input[type='checkbox']:not(:last)").prop('checked', false);
+                        }
+                    });
+                    $("#checkbox").on('click', function() {
+                        // console.log(6);
+                        var length = $("input[type='checkbox']:not(:first:last):checked").length;
+                        var length1 = $("input[type='checkbox']:not(:first:last)").length;
+                        if (length >= length1) {
+                            $("#checkall").prop('checked', true);
+                        } else {
+                            $("#checkall").prop('checked', false);
+                        }
+                    })
+
+                });
             }
         });
-    })
-    // $('#checkbox').on('click', function() {
-    //     var valshop = $(this).parent().parent().find('.priceadd');
-    //     console.log(valshop);
-    // });
+    }
+    var ulshop = $('#merchantList');
+    ulshop.on('change', function(ev) {
+        ev = ev || event;
+        target = event.target || event.srcElement;
+        if (target.type == 'number') {
+            var node = target.parentNode.parentNode.parentNode.parentNode.nextElementSibling;
+            var nodep = target.parentNode.parentNode.parentNode.parentNode.previousElementSibling;
+            // var recheckf = target.parentNode.parentNode.parentNode.parentNode.parentNode;
+            var chanum = $(target).val() * $(nodep).find('.cart-product-price').html();
+            // var recheck = $(recheckf).find('#checkbox');
+
+            // console.log(recheck);
+            $(node).find('.priceadd').html(chanum);
+            // $(recheck).prop('checked', false);
+        }
+    });
+    zojia.innerHTML = '0.00';
+    ulshop.on('click', function(ev) {
+        ev = ev || event;
+        target = event.target || event.srcElement;
+        var zojia = $('#zojia');
+        var shuliang = $('#shuliang');
+        var valshop = $(target).parent().parent().find('.priceadd');
+        var shuzhi = $(target).parent().parent().find('#addchange');
+        if (target.type == 'checkbox' && $(target).prop('checked') == true) {
+            $('#zojia').html(function(index, old) {
+                return (old * 1 + valshop.html() * 1).toFixed(2);
+            });
+            $('#shuliang').html(function(index, old) {
+                return old * 1 + shuzhi.val() * 1;
+            });
+
+        }
+        if (target.type == 'checkbox' && $(target).prop('checked') == false && $('#zojia').html() * 1 > 0) {
+            $('#zojia').html(function(index, old) {
+                return (old * 1 - valshop.html() * 1).toFixed(2);
+            });
+            $('#shuliang').html(function(index, old) {
+                return old * 1 - shuzhi.val() * 1;
+            });
+        }
+    });
+})

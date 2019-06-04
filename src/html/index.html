@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/main.min.css">
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../js/jquery.lazyload.min.js"></script>
+    <script src="../js/cookie.js"></script>
     <!--[if lt IE 9]>
       <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
@@ -23,6 +24,19 @@
                 placeholder: "../img/loading.gif",
                 effect: "fadeIn"
             });
+
+            var shop = cookie.get('shop');
+            var carnum = 0;
+            shop = JSON.parse(shop);
+            var arr2 = shop.map(function(elm, i) {
+                return elm.num;
+            });
+            for (var i = 0; i < arr2.length; i++) {
+                carnum += arr2[i] * 1;
+            }
+            console.log(arr2);
+            $('.shnum').html(carnum);
+
         })
     </script>
 </head>
@@ -52,7 +66,7 @@
             </div>
             <!-- 购物车 -->
             <a class="meizu-header-cart" href="shopping cart.html" target="_blank">
-                <em>0</em>
+                <em class="shnum">0</em>
             </a>
             <!-- 登录图标 -->
             <div class="meizu-header-user">
@@ -786,6 +800,7 @@
                                 effect: "fadeIn"
                             });
                         });
+
                     }
                 });
 

@@ -11,6 +11,22 @@
     <link rel="stylesheet" href="../css/footer.min.css">
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/contact.min.css">
+    <script src="../js/cookie.js"></script>
+    <script>
+        $(function() {
+            var shop = cookie.get('shop');
+            var carnum = 0;
+            shop = JSON.parse(shop);
+            var arr2 = shop.map(function(elm, i) {
+                return elm.num;
+            });
+            for (var i = 0; i < arr2.length; i++) {
+                carnum += arr2[i] * 1;
+            }
+            console.log(arr2);
+            $('.shnum').html(carnum);
+        })
+    </script>
 </head>
 
 <body>
@@ -19,7 +35,7 @@
         <div class="head-center">
             <!-- logo -->
             <div class="meizu-header-logo">
-                <a href="https://www.meizu.com/index.html" class="meizu-header-logo-img">
+                <a href="index.html" class="meizu-header-logo-img">
                     <svg fill="#00b4ff" version="1.1" id="Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="402.048px" height="73.556px" viewBox="17.318 5.824 402.048 73.556" enable-background="new 17.318 5.824 402.048 73.556"
                         xml:space="preserve">
                   <path d="M321.513,5.824H256.91v12.878h51.478l-49.294,44.581c-8.227,7.023-2.872,16.096,3.958,16.096h65.337V66.472
@@ -37,8 +53,8 @@
                 </a>
             </div>
             <!-- 购物车 -->
-            <a class="meizu-header-cart" href="https://cart.meizu.com/" target="_blank">
-                <em>0</em>
+            <a class="meizu-header-cart" href="shopping cart.html" target="_blank">
+                <em class="shnum">0</em>
             </a>
             <!-- 登录图标 -->
             <div class="meizu-header-user">
@@ -52,10 +68,10 @@
                         <!-- 这个是bootstrap的图标三角形 -->
                         <div class="glyphicon glyphicon-triangle-top xiaosj"> </div>
                         <li>
-                            <a href="https://login.flyme.cn/vCodeLogin " target="_blank ">立即登录</a>
+                            <a href="login.html" target="_blank ">立即登录</a>
                         </li>
                         <li>
-                            <a href="https://i.flyme.cn/register " target="_blank ">立即注册</a></li>
+                            <a href="register.html" target="_blank ">立即注册</a></li>
 
                         <li>
                             <a href="http://ordercenter.meizu.com/list/index.html " target="_blank ">我的订单</a>
@@ -687,7 +703,7 @@
                                         <a href="http://hr.meizu.com/" target="_blank">加入我们</a>
                                     </li>
                                     <li>
-                                        <a href="https://www.meizu.com/about.html" target="_blank">联系我们</a>
+                                        <a href="contact.html" target="_blank">联系我们</a>
                                     </li>
                                     <li>
                                         <a href="https://www.flyme.cn/index.html" target="_blank">Flyme</a>

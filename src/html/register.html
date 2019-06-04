@@ -7,6 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../css/register.min.css">
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="../js/register.js"></script>
+    <style>
+        label.error {
+            color: #387aff;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,7 +31,7 @@
                         <a class="title-a" href="javascript:void(0)">注册 Flyme 账号</a>
                     </div>
                     <div class="main-phone">
-                        <input id="phone" name="phone" class="phone-num" maxlength="11" placeholder="手机号码/用户名">
+                        <input id="phone" name="phone" class="phone-num" maxlength="16" placeholder="手机号码/用户名">
                     </div>
                     <div class="main-pwd">
                         <input id="password" name="password" class="phone-pwd" type="password" placeholder="请输入密码">
@@ -37,7 +45,7 @@
                         <label class="pointer">和</label>
                         <a href="http://www.meizu.com/legal.html" target="_blank" class="linkABlue">隐私声明</a>
                     </div>
-                    <a class="btn">立即注册</a>
+                    <input class="btn" type="submit" value="立即注册" style="width: 298px">
                     <div class="login-box">
                         <a href="login.html" id="login">登录</a>
                     </div>
@@ -51,7 +59,7 @@
                 <div class="footer-innerLink">
                     <a href="http://www.meizu.com/about.html" target="_blank" title="关于魅族">关于魅族</a>|
                     <a href="http://hr.meizu.com" target="_blank" title="工作机会">工作机会</a>|
-                    <a href="http://www.meizu.com/contact.html" target="_blank" title="联系我们">联系我们</a>|
+                    <a href="contact.html" target="_blank" title="联系我们">联系我们</a>|
                     <a href="https://www.meizu.com/legal.html" target="_blank" title="法律声明">法律声明</a>|
                     <a href="https://uc-res.mzres.com/resources/uc/wlogin/faq/html/index.html" target="_blank" title="常见问题">常见问题</a>|&nbsp;
                     <div href="javascript:void(0);" id="globalName" class="footer-language" title="简体中文">

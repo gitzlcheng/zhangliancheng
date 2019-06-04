@@ -12,5 +12,8 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "jquery": "^3.4.1"
+  },
+  "dependencies": {
+    "jquery-validation": "^1.19.0"
   }
 }
